@@ -16,15 +16,12 @@ final class SplashBuilder: BaseBuilder {
         let viewController: SplashViewController = SplashViewController()
         let router: SplashRouter = SplashRouter(viewController: viewController)
         
-//        let getAccountInteractor = GetAccountInteractor()
-//        let presenter: SplashPresenter = SplashPresenter(viewController: viewController,
-//                                                         router: router,
-//                                                         accountInteractor: getAccountInteractor)
-        let presenter: SplashPresenter = SplashPresenter(viewController: viewController,
-        router: router)
+        let getRecentFiles = GetRecentFilesInteractor()
+
+        let presenter: SplashPresenter = SplashPresenter(viewController: viewController, router: router, getRecentFilesInteractor: getRecentFiles)
         
         viewController.presenter = presenter
-//        getAccountInteractor.presenter = presenter
+        getRecentFiles.presenter = presenter
 
         return viewController
     }

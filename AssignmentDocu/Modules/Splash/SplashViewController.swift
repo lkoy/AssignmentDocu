@@ -21,7 +21,7 @@ final class SplashViewController: BaseViewController {
     
     private enum ViewTraits {
         static let margins = UIEdgeInsets(top: 0, left: 0, bottom: 10, right: 0)
-        static let loadingsize: CGFloat = 80.0
+        static let loadingsize: CGFloat = 200.0
     }
 
     // MARK: - ViewLife Cycle

@@ -18,46 +18,35 @@ protocol SplashPresenterProtocol: BasePresenterProtocol {
 
 final class SplashPresenter<T: SplashViewControllerProtocol, U: SplashRouterProtocol>: BasePresenter<T, U> {
     
-//    private let getAccountInteractor: GetAccountInteractorProtocol
-//
-//    init(viewController: T, router: U, accountInteractor: GetAccountInteractorProtocol) {
-//
-//        self.getAccountInteractor = accountInteractor
-//
-//        super.init(viewController: viewController, router: router)
-//    }
-    override init(viewController: T, router: U) {
-        
-//        self.getAccountInteractor = accountInteractor
-        
+    private let getRecentFilesInteractor: GetRecentFilesInteractorProtocol
+
+    init(viewController: T, router: U, getRecentFilesInteractor: GetRecentFilesInteractorProtocol) {
+
+        self.getRecentFilesInteractor = getRecentFilesInteractor
         super.init(viewController: viewController, router: router)
     }
     
+    func getRecentFiles() {
+        
+        getRecentFilesInteractor.getRecentFiles()
+    }
 }
 
 extension SplashPresenter: SplashPresenterProtocol {
 
     func getInitDetails() {
-        getAccountDetails()
+        
+        getRecentFiles()
     }
 }
 
-extension SplashPresenter {
+extension SplashPresenter: GetRecentFilesInteractorCallbackProtocol {
+
+    func filesFound() {
+        self.router.navigateToOpenFiles()
+    }
     
-    private func getAccountDetails() {
-//        getAccountInteractor.getAccount()
+    func showError() {
+        
     }
 }
-
-//extension SplashPresenter: GetAccountInteractorCallbackProtocol {
-//
-//    func found(account: MoneyouModels.Account) {
-//
-//        router.navigateToAccount(account: account)
-//    }
-//
-//    func showError(type: GetAccountInteractorError) {
-//
-//        print("error")
-//    }
-//}

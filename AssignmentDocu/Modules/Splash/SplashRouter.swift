@@ -9,12 +9,13 @@
 import Foundation
 
 protocol SplashRouterProtocol: BaseRouterProtocol {
-//    func navigateToAccount(account: MoneyouModels.Account)
+    func navigateToOpenFiles()
 }
 
 class SplashRouter: BaseRouter, SplashRouterProtocol {
 
-//    func navigateToAccount(account: MoneyouModels.Account) {
-//        navigationController?.setViewControllers([AccountBuilder.build(account: account)], animated: true)
-//    }
+    func navigateToOpenFiles() {
+        navigationController?.navigationBar.applyStyle()
+        navigationController?.setViewControllers([OpenFileBuilder.build()], animated: true)
+    }
 }
