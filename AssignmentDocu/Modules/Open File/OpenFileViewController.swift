@@ -38,7 +38,7 @@ final class OpenFileViewController: BaseViewController {
 
     override func setupComponents() {
 
-        view.backgroundColor = .gray
+        view.backgroundColor = .white
     }
 
     override func setupConstraints() {

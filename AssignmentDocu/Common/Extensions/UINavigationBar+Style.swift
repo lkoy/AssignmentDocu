@@ -12,8 +12,9 @@ extension UINavigationBar {
     
     public func applyStyle() {
         
-        barStyle = .black
+        barStyle = .default
         isTranslucent = true
         isOpaque = true
+        backgroundColor = .white
     }
 }
