@@ -16,6 +16,7 @@ protocol FileDetailsInteractorProtocol: BaseInteractorProtocol {
 protocol FileDetailsInteractorCallbackProtocol: BaseInteractorCallbackProtocol {
 
     func parsedFile(_ parsed: DetailModels.DetailFile)
+    func showError()
 }
 
 class FileDetailsInteractor: BaseInteractor {
@@ -41,8 +42,8 @@ class FileDetailsInteractor: BaseInteractor {
                 switch result {
                 case .success(let parsedFile):
                     self.presenter.parsedFile(parsedFile)
-                case .failure(let error):
-                    print("error")
+                case .failure:
+                    self.presenter.showError()
                 }
             }
         }
@@ -59,8 +60,8 @@ extension FileDetailsInteractor: FileDetailsInteractorProtocol {
             switch result {
             case .success(let dataFile):
                 self.parseFile(data: dataFile, fileType: fileType)
-            case .failure(let error):
-                print("error")
+            case .failure:
+                self.presenter.showError()
             }
         }
     }

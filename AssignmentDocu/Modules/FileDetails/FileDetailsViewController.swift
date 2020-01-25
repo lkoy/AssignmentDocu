@@ -124,6 +124,14 @@ extension FileDetailsViewController: FileDetailsViewControllerProtocol {
         viewModel = FileDetails.ViewModel(isLoading: false, issueCountTitle: "", dateTitle: "", issues: [])
         itemsTableView.reloadData()
     }
+    
+    func showErrorAlert() {
+        
+        let alert = UIAlertController(title: "Error", message: "Something went wrong", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: nil))
+
+        self.present(alert, animated: true)
+    }
 }
 
 // MARK: - TableView Delegate and Data Source

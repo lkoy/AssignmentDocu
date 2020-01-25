@@ -13,6 +13,7 @@ protocol FileDetailsViewControllerProtocol: BaseViewControllerProtocol {
     func show(_ viewModel: FileDetails.ViewModel)
     func setTitle(_ title: String)
     func showEmptyState()
+    func showErrorAlert()
 }
 
 protocol FileDetailsPresenterProtocol: BasePresenterProtocol {
@@ -55,5 +56,10 @@ extension FileDetailsPresenter: FileDetailsInteractorCallbackProtocol {
         } else {
             self.viewController.show(self.fileDetailsMapper.map(detailFile: parsed))
         }
+    }
+    
+    func showError() {
+        
+        self.viewController.showErrorAlert()
     }
 }
