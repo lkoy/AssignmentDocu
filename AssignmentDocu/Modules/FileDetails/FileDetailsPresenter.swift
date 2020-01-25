@@ -10,6 +10,7 @@ import Foundation
 
 protocol FileDetailsViewControllerProtocol: BaseViewControllerProtocol {
 
+    func show(_ viewModel: FileDetails.ViewModel)
 }
 
 protocol FileDetailsPresenterProtocol: BasePresenterProtocol {
@@ -22,11 +23,13 @@ final class FileDetailsPresenter<T: FileDetailsViewControllerProtocol, U: FileDe
     let file: FileModels.FileItem
     
     private let getFileDetailsInteractor: FileDetailsInteractorProtocol
+    private let fileDetailsMapper: FileDetailsMapper
     
-    init(viewController: T, router: U, file: FileModels.FileItem, getFileDetailsInteractor: FileDetailsInteractorProtocol) {
+    init(viewController: T, router: U, file: FileModels.FileItem, getFileDetailsInteractor: FileDetailsInteractorProtocol, fileDetailsMapper: FileDetailsMapper) {
         
         self.file = file
         self.getFileDetailsInteractor = getFileDetailsInteractor
+        self.fileDetailsMapper = fileDetailsMapper
         super.init(viewController: viewController, router: router)
     }
     
@@ -44,6 +47,6 @@ extension FileDetailsPresenter: FileDetailsInteractorCallbackProtocol {
     
     func parsedFile(_ parsed: DetailModels.DetailFile) {
         
-        print("details")
+        self.viewController.show(self.fileDetailsMapper.map(fileTitle: file.name, detailFile: parsed))
     }
 }

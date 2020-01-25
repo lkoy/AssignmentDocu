@@ -18,7 +18,7 @@ enum FileDetails {
         let surNameTitle: String
         let issueCountTitle: String
         let dateTitle: String
-        let accounts: [FileItem]
+        let issues: [FileItem]
         
         struct FileItem: Equatable {
             let name: String

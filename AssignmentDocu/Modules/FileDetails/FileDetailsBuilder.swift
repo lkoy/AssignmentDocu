@@ -16,8 +16,13 @@ final class FileDetailsBuilder: BaseBuilder {
         let viewController: FileDetailsViewController = FileDetailsViewController()
         let router: FileDetailsRouter = FileDetailsRouter(viewController: viewController)
         let getFileDetailsInteractor = FileDetailsInteractor()
+        let fileDetailsMapper = FileDetailsMapper()
         
-        let presenter: FileDetailsPresenter = FileDetailsPresenter(viewController: viewController, router: router, file: file, getFileDetailsInteractor: getFileDetailsInteractor)
+        let presenter: FileDetailsPresenter = FileDetailsPresenter(viewController: viewController,
+                                                                   router: router,
+                                                                   file: file,
+                                                                   getFileDetailsInteractor: getFileDetailsInteractor,
+                                                                   fileDetailsMapper: fileDetailsMapper)
         viewController.presenter = presenter
         getFileDetailsInteractor.presenter = presenter
 

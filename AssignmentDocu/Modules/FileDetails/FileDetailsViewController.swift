@@ -18,6 +18,8 @@ final class FileDetailsViewController: BaseViewController {
         static let margins = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
     
+    private var viewModel = FileDetails.ViewModel(screenTitle: "", firstNameTitle: "", surNameTitle: "", issueCountTitle: "", dateTitle: "", issues: [])
+    
     public enum AccessibilityIds {
         
     }
@@ -64,4 +66,9 @@ final class FileDetailsViewController: BaseViewController {
 // MARK: - FileDetailsViewControllerProtocol
 extension FileDetailsViewController: FileDetailsViewControllerProtocol {
  
+    func show(_ viewModel: FileDetails.ViewModel) {
+        
+        self.viewModel = viewModel
+//        self.filesTableView.reloadData()
+    }
 }
