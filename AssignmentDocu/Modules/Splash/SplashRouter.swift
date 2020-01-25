@@ -9,13 +9,13 @@
 import Foundation
 
 protocol SplashRouterProtocol: BaseRouterProtocol {
-    func navigateToOpenFiles()
+    func navigateToOpenFiles(withFiles files: [FileModels.FileItem])
 }
 
 class SplashRouter: BaseRouter, SplashRouterProtocol {
 
-    func navigateToOpenFiles() {
+    func navigateToOpenFiles(withFiles files: [FileModels.FileItem]) {
         navigationController?.navigationBar.applyStyle()
-        navigationController?.setViewControllers([OpenFileBuilder.build()], animated: true)
+        navigationController?.setViewControllers([OpenFileBuilder.build(withFiles: files)], animated: true)
     }
 }

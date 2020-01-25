@@ -10,15 +10,25 @@ import Foundation
 
 protocol OpenFileViewControllerProtocol: BaseViewControllerProtocol {
 
+    func show(_ viewModel: OpenFile.ViewModel)
 }
 
 protocol OpenFilePresenterProtocol: BasePresenterProtocol {
 
+    func prepareView()
+    func selectFile(at: Int)
 }
 
 final class OpenFilePresenter<T: OpenFileViewControllerProtocol, U: OpenFileRouterProtocol>: BasePresenter<T, U> {
 
-    override init(viewController: T, router: U) {
+    private let openFileMapper: OpenFileMapper
+    
+    let files: [FileModels.FileItem]
+    
+    init(viewController: T, router: U, fileItems: [FileModels.FileItem], fileMapper: OpenFileMapper) {
+        
+        self.files = fileItems
+        self.openFileMapper = fileMapper
         super.init(viewController: viewController, router: router)
     }
     
@@ -26,4 +36,13 @@ final class OpenFilePresenter<T: OpenFileViewControllerProtocol, U: OpenFileRout
 
 extension OpenFilePresenter: OpenFilePresenterProtocol {
 
+    func prepareView() {
+        
+        self.viewController.show(self.openFileMapper.map(files: self.files))
+    }
+    
+    func selectFile(at: Int) {
+        
+        self.router.navigateToFile(self.files[at])
+    }
 }

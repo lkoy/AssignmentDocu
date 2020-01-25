@@ -10,8 +10,13 @@ import Foundation
 
 protocol OpenFileRouterProtocol: BaseRouterProtocol {
 
+    func navigateToFile(_ file: FileModels.FileItem)
 }
 
 class OpenFileRouter: BaseRouter, OpenFileRouterProtocol {
 
+    func navigateToFile(_ file: FileModels.FileItem) {
+        
+        viewController.navigationController?.pushViewController(FileDetailsBuilder.build(withFile: file), animated: true)
+    }
 }

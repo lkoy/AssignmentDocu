@@ -23,6 +23,21 @@
 		533B519623D9BC32001CF3A5 /* UINavigationBar+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B519523D9BC32001CF3A5 /* UINavigationBar+Style.swift */; };
 		533B519A23D9BDC5001CF3A5 /* GetRecentFilesWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B519823D9BDC5001CF3A5 /* GetRecentFilesWorker.swift */; };
 		533B519B23D9BDC5001CF3A5 /* GetRecentFilesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B519923D9BDC5001CF3A5 /* GetRecentFilesInteractor.swift */; };
+		533B51A023DB32FF001CF3A5 /* Documents.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 533B519F23DB32FF001CF3A5 /* Documents.bundle */; };
+		533B51A723DC3CE0001CF3A5 /* FileDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B51A223DC3CDF001CF3A5 /* FileDetailsPresenter.swift */; };
+		533B51A823DC3CE0001CF3A5 /* FileDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B51A323DC3CDF001CF3A5 /* FileDetailsRouter.swift */; };
+		533B51A923DC3CE0001CF3A5 /* FileDetailsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B51A423DC3CDF001CF3A5 /* FileDetailsModels.swift */; };
+		533B51AA23DC3CE0001CF3A5 /* FileDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B51A523DC3CDF001CF3A5 /* FileDetailsViewController.swift */; };
+		533B51AB23DC3CE0001CF3A5 /* FileDetailsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B51A623DC3CDF001CF3A5 /* FileDetailsBuilder.swift */; };
+		533B51B123DC41F6001CF3A5 /* OneLineSchimmerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B51B023DC41F6001CF3A5 /* OneLineSchimmerTableViewCell.swift */; };
+		533B51B423DC4243001CF3A5 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B51B323DC4243001CF3A5 /* LoaderView.swift */; };
+		533B51B623DC4349001CF3A5 /* ImageOneLineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B51B523DC4349001CF3A5 /* ImageOneLineTableViewCell.swift */; };
+		533B51B923DC4A2E001CF3A5 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B51B823DC4A2E001CF3A5 /* Label.swift */; };
+		533B51BB23DC4A6D001CF3A5 /* UIFont+AppTypo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B51BA23DC4A6D001CF3A5 /* UIFont+AppTypo.swift */; };
+		533B51BD23DC4A9F001CF3A5 /* UIFont+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B51BC23DC4A9F001CF3A5 /* UIFont+App.swift */; };
+		533B51BF23DC4F5E001CF3A5 /* FileModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B51BE23DC4F5E001CF3A5 /* FileModels.swift */; };
+		533B51C123DC50E1001CF3A5 /* FileMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B51C023DC50E1001CF3A5 /* FileMapper.swift */; };
+		533B51C323DC5586001CF3A5 /* OpenFileMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B51C223DC5586001CF3A5 /* OpenFileMapper.swift */; };
 		53E73951237EF526007E0D80 /* Cartfile.private in Resources */ = {isa = PBXBuildFile; fileRef = 53E7394F237EF526007E0D80 /* Cartfile.private */; };
 		53E73952237EF526007E0D80 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 53E73950237EF526007E0D80 /* Cartfile */; };
 		53E73958237EF5F0007E0D80 /* UIColor+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E73955237EF5F0007E0D80 /* UIColor+App.swift */; };
@@ -96,6 +111,21 @@
 		533B519523D9BC32001CF3A5 /* UINavigationBar+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Style.swift"; sourceTree = "<group>"; };
 		533B519823D9BDC5001CF3A5 /* GetRecentFilesWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRecentFilesWorker.swift; sourceTree = "<group>"; };
 		533B519923D9BDC5001CF3A5 /* GetRecentFilesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRecentFilesInteractor.swift; sourceTree = "<group>"; };
+		533B519F23DB32FF001CF3A5 /* Documents.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Documents.bundle; sourceTree = "<group>"; };
+		533B51A223DC3CDF001CF3A5 /* FileDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDetailsPresenter.swift; sourceTree = "<group>"; };
+		533B51A323DC3CDF001CF3A5 /* FileDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDetailsRouter.swift; sourceTree = "<group>"; };
+		533B51A423DC3CDF001CF3A5 /* FileDetailsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDetailsModels.swift; sourceTree = "<group>"; };
+		533B51A523DC3CDF001CF3A5 /* FileDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDetailsViewController.swift; sourceTree = "<group>"; };
+		533B51A623DC3CDF001CF3A5 /* FileDetailsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDetailsBuilder.swift; sourceTree = "<group>"; };
+		533B51B023DC41F6001CF3A5 /* OneLineSchimmerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLineSchimmerTableViewCell.swift; sourceTree = "<group>"; };
+		533B51B323DC4243001CF3A5 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
+		533B51B523DC4349001CF3A5 /* ImageOneLineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageOneLineTableViewCell.swift; sourceTree = "<group>"; };
+		533B51B823DC4A2E001CF3A5 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
+		533B51BA23DC4A6D001CF3A5 /* UIFont+AppTypo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+AppTypo.swift"; sourceTree = "<group>"; };
+		533B51BC23DC4A9F001CF3A5 /* UIFont+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+App.swift"; sourceTree = "<group>"; };
+		533B51BE23DC4F5E001CF3A5 /* FileModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileModels.swift; sourceTree = "<group>"; };
+		533B51C023DC50E1001CF3A5 /* FileMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileMapper.swift; sourceTree = "<group>"; };
+		533B51C223DC5586001CF3A5 /* OpenFileMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenFileMapper.swift; sourceTree = "<group>"; };
 		53E7394F237EF526007E0D80 /* Cartfile.private */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.private; sourceTree = SOURCE_ROOT; };
 		53E73950237EF526007E0D80 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = SOURCE_ROOT; };
 		53E73955237EF5F0007E0D80 /* UIColor+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+App.swift"; sourceTree = "<group>"; };
@@ -182,6 +212,7 @@
 		533B517F23D9AF7C001CF3A5 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				533B51BE23DC4F5E001CF3A5 /* FileModels.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -210,6 +241,7 @@
 				533B518923D9B16C001CF3A5 /* OpenFilePresenter.swift */,
 				533B518A23D9B16C001CF3A5 /* OpenFileRouter.swift */,
 				533B518C23D9B16C001CF3A5 /* OpenFileViewController.swift */,
+				533B51C223DC5586001CF3A5 /* OpenFileMapper.swift */,
 			);
 			path = "Open File";
 			sourceTree = "<group>";
@@ -217,10 +249,66 @@
 		533B519723D9BD98001CF3A5 /* Recent Files */ = {
 			isa = PBXGroup;
 			children = (
-				533B519823D9BDC5001CF3A5 /* GetRecentFilesWorker.swift */,
 				533B519923D9BDC5001CF3A5 /* GetRecentFilesInteractor.swift */,
+				533B519823D9BDC5001CF3A5 /* GetRecentFilesWorker.swift */,
+				533B51C023DC50E1001CF3A5 /* FileMapper.swift */,
 			);
 			path = "Recent Files";
+			sourceTree = "<group>";
+		};
+		533B519C23DB1466001CF3A5 /* CSV files */ = {
+			isa = PBXGroup;
+			children = (
+				533B519F23DB32FF001CF3A5 /* Documents.bundle */,
+			);
+			path = "CSV files";
+			sourceTree = "<group>";
+		};
+		533B51A123DC3CCD001CF3A5 /* File Details */ = {
+			isa = PBXGroup;
+			children = (
+				533B51A623DC3CDF001CF3A5 /* FileDetailsBuilder.swift */,
+				533B51A423DC3CDF001CF3A5 /* FileDetailsModels.swift */,
+				533B51A223DC3CDF001CF3A5 /* FileDetailsPresenter.swift */,
+				533B51A323DC3CDF001CF3A5 /* FileDetailsRouter.swift */,
+				533B51A523DC3CDF001CF3A5 /* FileDetailsViewController.swift */,
+			);
+			path = "File Details";
+			sourceTree = "<group>";
+		};
+		533B51AC23DC418C001CF3A5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				533B51B723DC4A21001CF3A5 /* Labels */,
+				533B51B223DC4234001CF3A5 /* Loaders */,
+				533B51AD23DC41CE001CF3A5 /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		533B51AD23DC41CE001CF3A5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				533B51B523DC4349001CF3A5 /* ImageOneLineTableViewCell.swift */,
+				533B51B023DC41F6001CF3A5 /* OneLineSchimmerTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		533B51B223DC4234001CF3A5 /* Loaders */ = {
+			isa = PBXGroup;
+			children = (
+				533B51B323DC4243001CF3A5 /* LoaderView.swift */,
+			);
+			path = Loaders;
+			sourceTree = "<group>";
+		};
+		533B51B723DC4A21001CF3A5 /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				533B51B823DC4A2E001CF3A5 /* Label.swift */,
+			);
+			path = Labels;
 			sourceTree = "<group>";
 		};
 		53E73949237EF47B007E0D80 /* App */ = {
@@ -236,6 +324,7 @@
 		53E7394A237EF487007E0D80 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				533B51AC23DC418C001CF3A5 /* Views */,
 				533B517423D9ACAB001CF3A5 /* Managers */,
 				53E73954237EF5C5007E0D80 /* Extensions */,
 				53E7395B237EF616007E0D80 /* BaseComponents */,
@@ -257,6 +346,7 @@
 		53E7394C237EF4A6007E0D80 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				533B51A123DC3CCD001CF3A5 /* File Details */,
 				533B518823D9B144001CF3A5 /* Open File */,
 				53E73968237EFC7B007E0D80 /* Splash */,
 			);
@@ -266,6 +356,7 @@
 		53E7394D237EF4B1007E0D80 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				533B519C23DB1466001CF3A5 /* CSV files */,
 				53E73953237EF53D007E0D80 /* Animations */,
 				CCED6407237C921D00A1D8C0 /* Assets.xcassets */,
 			);
@@ -298,6 +389,8 @@
 				53E73955237EF5F0007E0D80 /* UIColor+App.swift */,
 				53E73956237EF5F0007E0D80 /* UIViewController+NavigarionBar.swift */,
 				533B519523D9BC32001CF3A5 /* UINavigationBar+Style.swift */,
+				533B51BA23DC4A6D001CF3A5 /* UIFont+AppTypo.swift */,
+				533B51BC23DC4A9F001CF3A5 /* UIFont+App.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -491,6 +584,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				533B51A023DB32FF001CF3A5 /* Documents.bundle in Resources */,
 				53E73952237EF526007E0D80 /* Cartfile in Resources */,
 				533B519423D9B8EF001CF3A5 /* loading-animation.json in Resources */,
 				CCED640B237C921D00A1D8C0 /* LaunchScreen.storyboard in Resources */,
@@ -523,31 +617,45 @@
 				533B519B23D9BDC5001CF3A5 /* GetRecentFilesInteractor.swift in Sources */,
 				53E73963237EF657007E0D80 /* BaseWorker.swift in Sources */,
 				53E73964237EF657007E0D80 /* BasePresenter.swift in Sources */,
+				533B51AA23DC3CE0001CF3A5 /* FileDetailsViewController.swift in Sources */,
+				533B51BD23DC4A9F001CF3A5 /* UIFont+App.swift in Sources */,
+				533B51AB23DC3CE0001CF3A5 /* FileDetailsBuilder.swift in Sources */,
+				533B51B923DC4A2E001CF3A5 /* Label.swift in Sources */,
 				533B519A23D9BDC5001CF3A5 /* GetRecentFilesWorker.swift in Sources */,
 				533B519023D9B16C001CF3A5 /* OpenFileModels.swift in Sources */,
 				53E7396D237EFCEB007E0D80 /* SplashRouter.swift in Sources */,
+				533B51B423DC4243001CF3A5 /* LoaderView.swift in Sources */,
 				53E73970237EFCEB007E0D80 /* SplashPresenter.swift in Sources */,
 				533B517D23D9AD3B001CF3A5 /* CoreDataManageable.swift in Sources */,
+				533B51BB23DC4A6D001CF3A5 /* UIFont+AppTypo.swift in Sources */,
 				53E73959237EF5F0007E0D80 /* UIViewController+NavigarionBar.swift in Sources */,
 				53E73958237EF5F0007E0D80 /* UIColor+App.swift in Sources */,
 				533B517B23D9AD26001CF3A5 /* CoreDataManager.swift in Sources */,
+				533B51A723DC3CE0001CF3A5 /* FileDetailsPresenter.swift in Sources */,
 				53E73967237EF657007E0D80 /* BaseInteractor.swift in Sources */,
 				533B519123D9B16C001CF3A5 /* OpenFileViewController.swift in Sources */,
 				53E73966237EF657007E0D80 /* BaseBuilder.swift in Sources */,
+				533B51B623DC4349001CF3A5 /* ImageOneLineTableViewCell.swift in Sources */,
 				533B519223D9B16C001CF3A5 /* OpenFileBuilder.swift in Sources */,
 				533B518723D9B057001CF3A5 /* UIApplication+Utils.swift in Sources */,
 				533B517923D9AD0D001CF3A5 /* NSManageObject+Utils.swift in Sources */,
+				533B51BF23DC4F5E001CF3A5 /* FileModels.swift in Sources */,
 				533B517723D9ACFD001CF3A5 /* NSManagedObjectContext+Query.swift in Sources */,
 				53E7395A237EF5F0007E0D80 /* Data+Files.swift in Sources */,
+				533B51B123DC41F6001CF3A5 /* OneLineSchimmerTableViewCell.swift in Sources */,
 				53E7396F237EFCEB007E0D80 /* SplashViewController.swift in Sources */,
 				CCED6406237C921900A1D8C0 /* AssignmentDocu.xcdatamodeld in Sources */,
 				533B518E23D9B16C001CF3A5 /* OpenFilePresenter.swift in Sources */,
 				533B518223D9AFAB001CF3A5 /* DataConvertible.swift in Sources */,
 				533B519623D9BC32001CF3A5 /* UINavigationBar+Style.swift in Sources */,
+				533B51A823DC3CE0001CF3A5 /* FileDetailsRouter.swift in Sources */,
+				533B51C123DC50E1001CF3A5 /* FileMapper.swift in Sources */,
 				533B518F23D9B16C001CF3A5 /* OpenFileRouter.swift in Sources */,
 				533B518523D9AFF9001CF3A5 /* Provider.swift in Sources */,
+				533B51C323DC5586001CF3A5 /* OpenFileMapper.swift in Sources */,
 				53E73965237EF657007E0D80 /* BaseRouter.swift in Sources */,
 				53E73962237EF657007E0D80 /* BaseViewController.swift in Sources */,
+				533B51A923DC3CE0001CF3A5 /* FileDetailsModels.swift in Sources */,
 				53E7396E237EFCEB007E0D80 /* SplashBuilder.swift in Sources */,
 				CCED63FE237C921900A1D8C0 /* AppDelegate.swift in Sources */,
 			);

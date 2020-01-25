@@ -42,8 +42,9 @@ extension SplashPresenter: SplashPresenterProtocol {
 
 extension SplashPresenter: GetRecentFilesInteractorCallbackProtocol {
 
-    func filesFound() {
-        self.router.navigateToOpenFiles()
+    func filesFound(files: [FileModels.FileItem]) {
+        
+        self.router.navigateToOpenFiles(withFiles: files)
     }
     
     func showError() {

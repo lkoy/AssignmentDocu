@@ -7,8 +7,18 @@
 //
 
 import Foundation
+import UIKit.UIImage
 
 enum OpenFile {
-//Place all module Models inside this enum as a struct or class
 
+    struct ViewModel: Equatable {
+        
+        let isLoading: Bool
+        let files: [CsvFile]
+        
+        struct CsvFile: Equatable {
+            let path: String
+            let image: UIImage?
+        }
+    }
 }
