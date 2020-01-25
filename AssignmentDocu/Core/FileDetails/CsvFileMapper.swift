@@ -41,10 +41,6 @@ class CsvFileMapper {
             return nil
         }
         
-        var date: Date?
-        let formatter = DateFormatter.csvDateFormatter
-        date = formatter.date(from: csvItem[3])
-        
-        return DetailModels.DetailFile.DetailItem(firstName: csvItem[0] , surName: csvItem[1] , issues: csvItem[2] , dateOfBirth: date)
+        return DetailModels.DetailFile.DetailItem(firstName: csvItem[0] , surName: csvItem[1] , issues: csvItem[2] , dateOfBirth: csvItem[3].toDate())
     }
 }

@@ -11,9 +11,16 @@ import Foundation
 extension Formatter {
 
     static let csvDateFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateFormat =  "yyyy-MM-dd'T'HH:mm:ss'Z"
-        formatter.timeZone = .current
-        return formatter
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeZone = .current
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z"
+        return dateFormatter
+    }()
+    
+    static let itemDateFormatter: DateFormatter = {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd MMMM yyyy"
+        return dateFormatter
     }()
 }

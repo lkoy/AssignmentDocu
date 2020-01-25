@@ -45,6 +45,9 @@
 		533B51CE23DC8473001CF3A5 /* CsvFileMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B51CD23DC8473001CF3A5 /* CsvFileMapper.swift */; };
 		533B51D023DC8A7E001CF3A5 /* Formatter+Csv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B51CF23DC8A7E001CF3A5 /* Formatter+Csv.swift */; };
 		533B51D223DC98C3001CF3A5 /* FileDetailsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B51D123DC98C3001CF3A5 /* FileDetailsMapper.swift */; };
+		533B51D423DCA3AA001CF3A5 /* String+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B51D323DCA3AA001CF3A5 /* String+Date.swift */; };
+		533B51D623DCA868001CF3A5 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B51D523DCA868001CF3A5 /* ItemTableViewCell.swift */; };
+		533B51D823DCAE8A001CF3A5 /* ItemSchimmerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B51D723DCAE8A001CF3A5 /* ItemSchimmerTableViewCell.swift */; };
 		53E73951237EF526007E0D80 /* Cartfile.private in Resources */ = {isa = PBXBuildFile; fileRef = 53E7394F237EF526007E0D80 /* Cartfile.private */; };
 		53E73952237EF526007E0D80 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 53E73950237EF526007E0D80 /* Cartfile */; };
 		53E73958237EF5F0007E0D80 /* UIColor+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E73955237EF5F0007E0D80 /* UIColor+App.swift */; };
@@ -140,6 +143,9 @@
 		533B51CD23DC8473001CF3A5 /* CsvFileMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CsvFileMapper.swift; sourceTree = "<group>"; };
 		533B51CF23DC8A7E001CF3A5 /* Formatter+Csv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Formatter+Csv.swift"; sourceTree = "<group>"; };
 		533B51D123DC98C3001CF3A5 /* FileDetailsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDetailsMapper.swift; sourceTree = "<group>"; };
+		533B51D323DCA3AA001CF3A5 /* String+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Date.swift"; sourceTree = "<group>"; };
+		533B51D523DCA868001CF3A5 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
+		533B51D723DCAE8A001CF3A5 /* ItemSchimmerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemSchimmerTableViewCell.swift; sourceTree = "<group>"; };
 		53E7394F237EF526007E0D80 /* Cartfile.private */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.private; sourceTree = SOURCE_ROOT; };
 		53E73950237EF526007E0D80 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = SOURCE_ROOT; };
 		53E73955237EF5F0007E0D80 /* UIColor+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+App.swift"; sourceTree = "<group>"; };
@@ -307,6 +313,8 @@
 			children = (
 				533B51B523DC4349001CF3A5 /* ImageOneLineTableViewCell.swift */,
 				533B51B023DC41F6001CF3A5 /* OneLineSchimmerTableViewCell.swift */,
+				533B51D523DCA868001CF3A5 /* ItemTableViewCell.swift */,
+				533B51D723DCAE8A001CF3A5 /* ItemSchimmerTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -420,6 +428,7 @@
 				533B51BA23DC4A6D001CF3A5 /* UIFont+AppTypo.swift */,
 				533B51BC23DC4A9F001CF3A5 /* UIFont+App.swift */,
 				533B51CF23DC8A7E001CF3A5 /* Formatter+Csv.swift */,
+				533B51D323DCA3AA001CF3A5 /* String+Date.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -659,10 +668,12 @@
 				533B51B423DC4243001CF3A5 /* LoaderView.swift in Sources */,
 				53E73970237EFCEB007E0D80 /* SplashPresenter.swift in Sources */,
 				533B51C823DC6F34001CF3A5 /* FileDetailsInteractor.swift in Sources */,
+				533B51D823DCAE8A001CF3A5 /* ItemSchimmerTableViewCell.swift in Sources */,
 				533B517D23D9AD3B001CF3A5 /* CoreDataManageable.swift in Sources */,
 				533B51BB23DC4A6D001CF3A5 /* UIFont+AppTypo.swift in Sources */,
 				53E73959237EF5F0007E0D80 /* UIViewController+NavigarionBar.swift in Sources */,
 				53E73958237EF5F0007E0D80 /* UIColor+App.swift in Sources */,
+				533B51D623DCA868001CF3A5 /* ItemTableViewCell.swift in Sources */,
 				533B517B23D9AD26001CF3A5 /* CoreDataManager.swift in Sources */,
 				533B51A723DC3CE0001CF3A5 /* FileDetailsPresenter.swift in Sources */,
 				53E73967237EF657007E0D80 /* BaseInteractor.swift in Sources */,
@@ -671,6 +682,7 @@
 				533B51B623DC4349001CF3A5 /* ImageOneLineTableViewCell.swift in Sources */,
 				533B519223D9B16C001CF3A5 /* OpenFileBuilder.swift in Sources */,
 				533B518723D9B057001CF3A5 /* UIApplication+Utils.swift in Sources */,
+				533B51D423DCA3AA001CF3A5 /* String+Date.swift in Sources */,
 				533B51CE23DC8473001CF3A5 /* CsvFileMapper.swift in Sources */,
 				533B517923D9AD0D001CF3A5 /* NSManageObject+Utils.swift in Sources */,
 				533B51BF23DC4F5E001CF3A5 /* FileModels.swift in Sources */,

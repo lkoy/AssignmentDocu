@@ -12,18 +12,16 @@ enum FileDetails {
 
     struct ViewModel: Equatable {
         
+        let isLoading: Bool
         let screenTitle: String
         
-        let firstNameTitle: String
-        let surNameTitle: String
         let issueCountTitle: String
         let dateTitle: String
         let issues: [FileItem]
         
         struct FileItem: Equatable {
-            let name: String
-            let surname: String
-            let isueCount: String
+            let fullName: String
+            let issueCount: String
             let date: String
         }
     }

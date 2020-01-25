@@ -15,17 +15,20 @@ final class FileDetailsMapper {
         var filesView: [FileDetails.ViewModel.FileItem] = []
         for item in detailFile.items {
             
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "dd MMMM yyyy"
+            var stringDate = ""
+            
+            let dateFormatter = Formatter.itemDateFormatter
+            if let date = item.dateOfBirth {
+                stringDate = dateFormatter.string(from: date)
+            }
             
             
-            let itemView = FileDetails.ViewModel.FileItem(name: item.firstName, surname: item.surName, isueCount: item.issues, date: "TBD")
+            let itemView = FileDetails.ViewModel.FileItem(fullName: item.firstName + " " + item.surName, issueCount: item.issues, date: stringDate)
             filesView.append(itemView)
         }
         
-        return FileDetails.ViewModel(screenTitle: fileTitle,
-                                     firstNameTitle: detailFile.firstNameHeader,
-                                     surNameTitle: detailFile.surNameHeader,
+        return FileDetails.ViewModel(isLoading: false,
+                                     screenTitle: fileTitle,
                                      issueCountTitle: detailFile.issuesHeader,
                                      dateTitle: detailFile.dateOfBirthHeader,
                                      issues: filesView)
