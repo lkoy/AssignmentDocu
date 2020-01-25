@@ -127,13 +127,13 @@ public class ItemTableViewCell: UITableViewCell {
         super.prepareForReuse()
         
         title = nil
-        titleColor = .black
+        titleColor = .appBlack
         
         subtitle = nil
-        subTitleColor = .black
+        subTitleColor = .appDarkGrey
         
         issues = nil
-        issuesColor = .black
+        issuesColor = .appDarkGrey
         
     }
 }

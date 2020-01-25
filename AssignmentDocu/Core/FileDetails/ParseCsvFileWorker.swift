@@ -26,15 +26,19 @@ final class ParseCsvFileWorker: ParseCsvFileWorkerAlias {
     
     override func job(input: String, completion: @escaping (Result<DetailModels.DetailFile, ParseCsvFileWorkerError>) -> Void) {
         
-        let cleanInput = cleanRows(file: input)
-        var csvRows: [[String]] = []
-        let rows = cleanInput.components(separatedBy: "\n")
-        for row in rows {
-            let columns = row.components(separatedBy: ",")
-            csvRows.append(columns)
+        DispatchQueue(label: "com.ttg.AssignmentDocu.parseFile", qos: .background).async{
+            
+            let cleanInput = self.cleanRows(file: input)
+            var csvRows: [[String]] = []
+            let rows = cleanInput.components(separatedBy: "\n")
+            for row in rows {
+                guard !row.isEmpty else { continue }
+                let columns = row.components(separatedBy: ",")
+                csvRows.append(columns)
+            }
+            
+            completion(.success(self.mapper.map(csvFileItems: csvRows)))
         }
-        
-        completion(.success(mapper.map(csvFileItems: csvRows)))
     }
     
     private func cleanRows(file:String)->String{

@@ -11,6 +11,8 @@ import Foundation
 protocol FileDetailsViewControllerProtocol: BaseViewControllerProtocol {
 
     func show(_ viewModel: FileDetails.ViewModel)
+    func setTitle(_ title: String)
+    func showEmptyState()
 }
 
 protocol FileDetailsPresenterProtocol: BasePresenterProtocol {
@@ -39,6 +41,7 @@ extension FileDetailsPresenter: FileDetailsPresenterProtocol {
 
     func prepareView() {
         
+        self.viewController.setTitle(self.file.name)
         self.getFileDetailsInteractor.getFileDetailsFromPath(self.file.path, fileType: self.file.kind)
     }
 }
@@ -47,6 +50,10 @@ extension FileDetailsPresenter: FileDetailsInteractorCallbackProtocol {
     
     func parsedFile(_ parsed: DetailModels.DetailFile) {
         
-        self.viewController.show(self.fileDetailsMapper.map(fileTitle: file.name, detailFile: parsed))
+        if parsed.items.isEmpty {
+            self.viewController.showEmptyState()
+        } else {
+            self.viewController.show(self.fileDetailsMapper.map(detailFile: parsed))
+        }
     }
 }

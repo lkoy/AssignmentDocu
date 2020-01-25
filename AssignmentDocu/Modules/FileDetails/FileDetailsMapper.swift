@@ -10,7 +10,7 @@ import Foundation
 
 final class FileDetailsMapper {
 
-    final func map(fileTitle: String, detailFile: DetailModels.DetailFile) -> FileDetails.ViewModel {
+    final func map(detailFile: DetailModels.DetailFile) -> FileDetails.ViewModel {
         
         var filesView: [FileDetails.ViewModel.FileItem] = []
         for item in detailFile.items {
@@ -28,7 +28,6 @@ final class FileDetailsMapper {
         }
         
         return FileDetails.ViewModel(isLoading: false,
-                                     screenTitle: fileTitle,
                                      issueCountTitle: detailFile.issuesHeader,
                                      dateTitle: detailFile.dateOfBirthHeader,
                                      issues: filesView)

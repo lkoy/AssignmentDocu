@@ -13,7 +13,6 @@ enum FileDetails {
     struct ViewModel: Equatable {
         
         let isLoading: Bool
-        let screenTitle: String
         
         let issueCountTitle: String
         let dateTitle: String

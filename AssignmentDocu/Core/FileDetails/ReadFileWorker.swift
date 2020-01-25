@@ -18,12 +18,15 @@ final class ReadFileWorker: ReadFileWorkerAlias {
     
     override func job(input: String, completion: @escaping ((Result<String, ReadFileWorkerError>) -> Void)) {
         
-        do {
-            var contents = try String(contentsOfFile: input, encoding: .utf8)
-            completion(.success(contents))
-        } catch {
-            print("File Read Error for file \(input)")
-            completion(.failure(.readFileError))
+        DispatchQueue(label: "com.ttg.AssignmentDocu.readFile", qos: .background).async{
+            
+            do {
+                let contents = try String(contentsOfFile: input, encoding: .utf8)
+                completion(.success(contents))
+            } catch {
+                print("File Read Error for file \(input)")
+                completion(.failure(.readFileError))
+            }
         }
     }
 }

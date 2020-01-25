@@ -18,9 +18,12 @@ final class FileDetailsViewController: BaseViewController {
         static let margins = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
     
+    private var emptyView: UIView!
+    private var emptyMessageLabel: Label!
+    
     private var itemsTableView: UITableView!
     
-    private var viewModel = FileDetails.ViewModel(isLoading: true, screenTitle: "", issueCountTitle: "", dateTitle: "", issues: [])
+    private var viewModel = FileDetails.ViewModel(isLoading: true, issueCountTitle: "", dateTitle: "", issues: [])
     
     public enum AccessibilityIds {
         
@@ -59,6 +62,17 @@ final class FileDetailsViewController: BaseViewController {
         itemsTableView.separatorStyle = .singleLine
         itemsTableView.dataSource = self
         view.addSubview(itemsTableView)
+        
+        emptyView = UIView()
+        emptyView.backgroundColor = .appWhite
+        emptyView.isHidden = true
+        emptyView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(emptyView)
+        
+        emptyMessageLabel = Label(style: .title1)
+        emptyMessageLabel.text = "EMPTY FILE"
+        emptyMessageLabel.translatesAutoresizingMaskIntoConstraints = false
+        emptyView.addSubview(emptyMessageLabel)
     }
 
     override func setupConstraints() {
@@ -68,7 +82,15 @@ final class FileDetailsViewController: BaseViewController {
             itemsTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             itemsTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             itemsTableView.topAnchor.constraint(equalTo: view.topAnchor),
-            itemsTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            itemsTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            
+            emptyView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            emptyView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            emptyView.topAnchor.constraint(equalTo: view.topAnchor),
+            emptyView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            
+            emptyMessageLabel.centerXAnchor.constraint(equalTo: emptyView.centerXAnchor),
+            emptyMessageLabel.centerYAnchor.constraint(equalTo: emptyView.centerYAnchor)
         ])
     }
     
@@ -88,8 +110,19 @@ extension FileDetailsViewController: FileDetailsViewControllerProtocol {
     func show(_ viewModel: FileDetails.ViewModel) {
         
         self.viewModel = viewModel
-        self.title = viewModel.screenTitle
-        self.itemsTableView.reloadData()
+        itemsTableView.reloadData()
+    }
+    
+    func setTitle(_ title: String) {
+        
+        self.title = title
+    }
+    
+    func showEmptyState() {
+        
+        self.emptyView.isHidden = false
+        viewModel = FileDetails.ViewModel(isLoading: false, issueCountTitle: "", dateTitle: "", issues: [])
+        itemsTableView.reloadData()
     }
 }
 
