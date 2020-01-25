@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import Nimble
 @testable import AssignmentDocu
 
 class AssignmentDocuTests: XCTestCase {

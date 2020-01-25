@@ -48,6 +48,8 @@
 		533B51D423DCA3AA001CF3A5 /* String+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B51D323DCA3AA001CF3A5 /* String+Date.swift */; };
 		533B51D623DCA868001CF3A5 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B51D523DCA868001CF3A5 /* ItemTableViewCell.swift */; };
 		533B51D823DCAE8A001CF3A5 /* ItemSchimmerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B51D723DCAE8A001CF3A5 /* ItemSchimmerTableViewCell.swift */; };
+		53DDD64723DCD061009DCB69 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DDD64423DCD052009DCB69 /* Nimble.framework */; };
+		53DDD64A23DCD083009DCB69 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 53DDD64923DCD083009DCB69 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		53E73951237EF526007E0D80 /* Cartfile.private in Resources */ = {isa = PBXBuildFile; fileRef = 53E7394F237EF526007E0D80 /* Cartfile.private */; };
 		53E73952237EF526007E0D80 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 53E73950237EF526007E0D80 /* Cartfile */; };
 		53E73958237EF5F0007E0D80 /* UIColor+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E73955237EF5F0007E0D80 /* UIColor+App.swift */; };
@@ -91,6 +93,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		53DDD64823DCD073009DCB69 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				53DDD64A23DCD083009DCB69 /* Nimble.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		53E73975237EFF5D007E0D80 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -146,6 +158,8 @@
 		533B51D323DCA3AA001CF3A5 /* String+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Date.swift"; sourceTree = "<group>"; };
 		533B51D523DCA868001CF3A5 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		533B51D723DCAE8A001CF3A5 /* ItemSchimmerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemSchimmerTableViewCell.swift; sourceTree = "<group>"; };
+		53DDD64423DCD052009DCB69 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		53DDD64923DCD083009DCB69 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		53E7394F237EF526007E0D80 /* Cartfile.private */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.private; sourceTree = SOURCE_ROOT; };
 		53E73950237EF526007E0D80 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = SOURCE_ROOT; };
 		53E73955237EF5F0007E0D80 /* UIColor+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+App.swift"; sourceTree = "<group>"; };
@@ -189,6 +203,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53DDD64723DCD061009DCB69 /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +475,7 @@
 		53E73971237EFF5D007E0D80 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				53DDD64423DCD052009DCB69 /* Nimble.framework */,
 				53E73972237EFF5D007E0D80 /* Lottie.framework */,
 			);
 			name = Frameworks;
@@ -468,6 +484,7 @@
 		CCED63F1237C921900A1D8C0 = {
 			isa = PBXGroup;
 			children = (
+				53DDD64923DCD083009DCB69 /* Nimble.framework */,
 				CCED63FC237C921900A1D8C0 /* AssignmentDocu */,
 				CCED6414237C921D00A1D8C0 /* AssignmentDocuTests */,
 				CCED641F237C921D00A1D8C0 /* AssignmentDocuUITests */,
@@ -528,6 +545,7 @@
 				CCED63F7237C921900A1D8C0 /* Frameworks */,
 				CCED63F8237C921900A1D8C0 /* Resources */,
 				53E73975237EFF5D007E0D80 /* Embed Frameworks */,
+				53DDD64823DCD073009DCB69 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -921,6 +939,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W7PH9VUC6D;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = AssignmentDocuTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -942,6 +964,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W7PH9VUC6D;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = AssignmentDocuTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
