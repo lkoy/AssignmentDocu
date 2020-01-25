@@ -16,5 +16,6 @@ extension UINavigationBar {
         isTranslucent = true
         isOpaque = true
         backgroundColor = .white
+        tintColor = .appBlack
     }
 }

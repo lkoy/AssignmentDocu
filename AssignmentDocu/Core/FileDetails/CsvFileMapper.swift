@@ -28,11 +28,15 @@ class CsvFileMapper {
             csvItems.append(mapped)
         }
         
-        return DetailModels.DetailFile(firstNameHeader: firstItem?[0] ?? "",
-                                 surNameHeader: firstItem?[1] ?? "",
-                                 issuesHeader: firstItem?[2] ?? "",
-                                 dateOfBirthHeader: firstItem?[3] ?? "",
-                                 items: csvItems)
+        if firstItem?.count == 4 {
+            return DetailModels.DetailFile(firstNameHeader: firstItem?[0] ?? "",
+            surNameHeader: firstItem?[1] ?? "",
+            issuesHeader: firstItem?[2] ?? "",
+            dateOfBirthHeader: firstItem?[3] ?? "",
+            items: csvItems)
+        }
+        
+        return DetailModels.DetailFile(firstNameHeader: "", surNameHeader: "", issuesHeader: "", dateOfBirthHeader: "", items: csvItems)
     }
     
     final func map(csvItem: [String]) -> DetailModels.DetailFile.DetailItem? {
