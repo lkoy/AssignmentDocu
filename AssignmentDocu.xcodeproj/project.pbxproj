@@ -233,7 +233,7 @@
 			path = Providers;
 			sourceTree = "<group>";
 		};
-		533B518823D9B144001CF3A5 /* Open File */ = {
+		533B518823D9B144001CF3A5 /* OpenFile */ = {
 			isa = PBXGroup;
 			children = (
 				533B518D23D9B16C001CF3A5 /* OpenFileBuilder.swift */,
@@ -243,17 +243,17 @@
 				533B518C23D9B16C001CF3A5 /* OpenFileViewController.swift */,
 				533B51C223DC5586001CF3A5 /* OpenFileMapper.swift */,
 			);
-			path = "Open File";
+			path = OpenFile;
 			sourceTree = "<group>";
 		};
-		533B519723D9BD98001CF3A5 /* Recent Files */ = {
+		533B519723D9BD98001CF3A5 /* RecentFiles */ = {
 			isa = PBXGroup;
 			children = (
 				533B519923D9BDC5001CF3A5 /* GetRecentFilesInteractor.swift */,
 				533B519823D9BDC5001CF3A5 /* GetRecentFilesWorker.swift */,
 				533B51C023DC50E1001CF3A5 /* FileMapper.swift */,
 			);
-			path = "Recent Files";
+			path = RecentFiles;
 			sourceTree = "<group>";
 		};
 		533B519C23DB1466001CF3A5 /* CSV files */ = {
@@ -264,7 +264,7 @@
 			path = "CSV files";
 			sourceTree = "<group>";
 		};
-		533B51A123DC3CCD001CF3A5 /* File Details */ = {
+		533B51A123DC3CCD001CF3A5 /* FileDetails */ = {
 			isa = PBXGroup;
 			children = (
 				533B51A623DC3CDF001CF3A5 /* FileDetailsBuilder.swift */,
@@ -273,7 +273,7 @@
 				533B51A323DC3CDF001CF3A5 /* FileDetailsRouter.swift */,
 				533B51A523DC3CDF001CF3A5 /* FileDetailsViewController.swift */,
 			);
-			path = "File Details";
+			path = FileDetails;
 			sourceTree = "<group>";
 		};
 		533B51AC23DC418C001CF3A5 /* Views */ = {
@@ -311,6 +311,13 @@
 			path = Labels;
 			sourceTree = "<group>";
 		};
+		533B51C423DC5EB4001CF3A5 /* FileDetails */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FileDetails;
+			sourceTree = "<group>";
+		};
 		53E73949237EF47B007E0D80 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -335,7 +342,8 @@
 		53E7394B237EF492007E0D80 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				533B519723D9BD98001CF3A5 /* Recent Files */,
+				533B51C423DC5EB4001CF3A5 /* FileDetails */,
+				533B519723D9BD98001CF3A5 /* RecentFiles */,
 				533B517E23D9AF69001CF3A5 /* CoreData */,
 				533B517F23D9AF7C001CF3A5 /* Domain */,
 				533B518023D9AF93001CF3A5 /* Helpers */,
@@ -346,8 +354,8 @@
 		53E7394C237EF4A6007E0D80 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				533B51A123DC3CCD001CF3A5 /* File Details */,
-				533B518823D9B144001CF3A5 /* Open File */,
+				533B51A123DC3CCD001CF3A5 /* FileDetails */,
+				533B518823D9B144001CF3A5 /* OpenFile */,
 				53E73968237EFC7B007E0D80 /* Splash */,
 			);
 			path = Modules;
