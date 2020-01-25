@@ -27,9 +27,10 @@ class FileMapper {
     
     final func map(fileItem: String) -> FileModels.FileItem? {
 
-        guard fileItem.count > 0 else {
+        guard fileItem.count > 0, let fileURL = URL(string: fileItem) else {
             return nil
         }
-        return FileModels.FileItem(path: fileItem, kind: .csv)
+        
+        return FileModels.FileItem(name: fileURL.deletingPathExtension().lastPathComponent, path: fileItem, kind: .csv)
     }
 }

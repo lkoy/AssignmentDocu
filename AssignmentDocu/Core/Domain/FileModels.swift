@@ -12,6 +12,7 @@ enum FileModels {
 
     struct FileItem: Codable, Equatable {
         
+        let name: String
         let path: String
         let kind: Kind
         

@@ -17,7 +17,7 @@ enum OpenFile {
         let files: [CsvFile]
         
         struct CsvFile: Equatable {
-            let path: String
+            let name: String
             let image: UIImage?
         }
     }

@@ -15,7 +15,6 @@ final class SplashBuilder: BaseBuilder {
 
         let viewController: SplashViewController = SplashViewController()
         let router: SplashRouter = SplashRouter(viewController: viewController)
-        
         let getRecentFiles = GetRecentFilesInteractor()
 
         let presenter: SplashPresenter = SplashPresenter(viewController: viewController, router: router, getRecentFilesInteractor: getRecentFiles)

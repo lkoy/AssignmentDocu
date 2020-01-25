@@ -12,6 +12,8 @@ enum FileDetails {
 
     struct ViewModel: Equatable {
         
+        let screenTitle: String
+        
         let firstNameTitle: String
         let surNameTitle: String
         let issueCountTitle: String

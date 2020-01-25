@@ -17,7 +17,7 @@ final class OpenFileMapper {
         for file in files {
             
             let image = UIImage(named: file.kind.image)
-            let fileView = OpenFile.ViewModel.CsvFile(path: file.path, image: image)
+            let fileView = OpenFile.ViewModel.CsvFile(name: file.name, image: image)
             filesView.append(fileView)
         }
         return OpenFile.ViewModel(isLoading: false, files: filesView)

@@ -56,7 +56,7 @@ public class ImageOneLineTableViewCell: UITableViewCell {
         
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        self.selectionStyle = .gray
+        self.selectionStyle = .default
         
         containerView.translatesAutoresizingMaskIntoConstraints = false
         containerView.backgroundColor = .appLigthGrey

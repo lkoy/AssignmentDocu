@@ -116,7 +116,7 @@ extension OpenFileViewController: UITableViewDataSource {
             }
             let file = viewModel.files[indexPath.row]
             cell.leftImage = file.image
-            cell.title = file.path
+            cell.title = file.name
             return cell
         }
     }
@@ -128,6 +128,7 @@ extension OpenFileViewController: UITableViewDelegate {
 
         if !self.viewModel.isLoading {
             self.presenter.selectFile(at: indexPath.row)
+            tableView.deselectRow(at: indexPath, animated: true)
         }
     }
 }

@@ -38,6 +38,12 @@
 		533B51BF23DC4F5E001CF3A5 /* FileModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B51BE23DC4F5E001CF3A5 /* FileModels.swift */; };
 		533B51C123DC50E1001CF3A5 /* FileMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B51C023DC50E1001CF3A5 /* FileMapper.swift */; };
 		533B51C323DC5586001CF3A5 /* OpenFileMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B51C223DC5586001CF3A5 /* OpenFileMapper.swift */; };
+		533B51C723DC6F34001CF3A5 /* ReadFileWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B51C523DC6F33001CF3A5 /* ReadFileWorker.swift */; };
+		533B51C823DC6F34001CF3A5 /* FileDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B51C623DC6F34001CF3A5 /* FileDetailsInteractor.swift */; };
+		533B51CA23DC7413001CF3A5 /* ParseCsvFileWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B51C923DC7413001CF3A5 /* ParseCsvFileWorker.swift */; };
+		533B51CC23DC821D001CF3A5 /* DetailModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B51CB23DC821D001CF3A5 /* DetailModels.swift */; };
+		533B51CE23DC8473001CF3A5 /* CsvFileMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B51CD23DC8473001CF3A5 /* CsvFileMapper.swift */; };
+		533B51D023DC8A7E001CF3A5 /* Formatter+Csv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B51CF23DC8A7E001CF3A5 /* Formatter+Csv.swift */; };
 		53E73951237EF526007E0D80 /* Cartfile.private in Resources */ = {isa = PBXBuildFile; fileRef = 53E7394F237EF526007E0D80 /* Cartfile.private */; };
 		53E73952237EF526007E0D80 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 53E73950237EF526007E0D80 /* Cartfile */; };
 		53E73958237EF5F0007E0D80 /* UIColor+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E73955237EF5F0007E0D80 /* UIColor+App.swift */; };
@@ -126,6 +132,12 @@
 		533B51BE23DC4F5E001CF3A5 /* FileModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileModels.swift; sourceTree = "<group>"; };
 		533B51C023DC50E1001CF3A5 /* FileMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileMapper.swift; sourceTree = "<group>"; };
 		533B51C223DC5586001CF3A5 /* OpenFileMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenFileMapper.swift; sourceTree = "<group>"; };
+		533B51C523DC6F33001CF3A5 /* ReadFileWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadFileWorker.swift; sourceTree = "<group>"; };
+		533B51C623DC6F34001CF3A5 /* FileDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDetailsInteractor.swift; sourceTree = "<group>"; };
+		533B51C923DC7413001CF3A5 /* ParseCsvFileWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseCsvFileWorker.swift; sourceTree = "<group>"; };
+		533B51CB23DC821D001CF3A5 /* DetailModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModels.swift; sourceTree = "<group>"; };
+		533B51CD23DC8473001CF3A5 /* CsvFileMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CsvFileMapper.swift; sourceTree = "<group>"; };
+		533B51CF23DC8A7E001CF3A5 /* Formatter+Csv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Formatter+Csv.swift"; sourceTree = "<group>"; };
 		53E7394F237EF526007E0D80 /* Cartfile.private */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.private; sourceTree = SOURCE_ROOT; };
 		53E73950237EF526007E0D80 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = SOURCE_ROOT; };
 		53E73955237EF5F0007E0D80 /* UIColor+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+App.swift"; sourceTree = "<group>"; };
@@ -213,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				533B51BE23DC4F5E001CF3A5 /* FileModels.swift */,
+				533B51CB23DC821D001CF3A5 /* DetailModels.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -314,6 +327,10 @@
 		533B51C423DC5EB4001CF3A5 /* FileDetails */ = {
 			isa = PBXGroup;
 			children = (
+				533B51C623DC6F34001CF3A5 /* FileDetailsInteractor.swift */,
+				533B51C523DC6F33001CF3A5 /* ReadFileWorker.swift */,
+				533B51C923DC7413001CF3A5 /* ParseCsvFileWorker.swift */,
+				533B51CD23DC8473001CF3A5 /* CsvFileMapper.swift */,
 			);
 			path = FileDetails;
 			sourceTree = "<group>";
@@ -399,6 +416,7 @@
 				533B519523D9BC32001CF3A5 /* UINavigationBar+Style.swift */,
 				533B51BA23DC4A6D001CF3A5 /* UIFont+AppTypo.swift */,
 				533B51BC23DC4A9F001CF3A5 /* UIFont+App.swift */,
+				533B51CF23DC8A7E001CF3A5 /* Formatter+Csv.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -623,6 +641,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				533B519B23D9BDC5001CF3A5 /* GetRecentFilesInteractor.swift in Sources */,
+				533B51C723DC6F34001CF3A5 /* ReadFileWorker.swift in Sources */,
 				53E73963237EF657007E0D80 /* BaseWorker.swift in Sources */,
 				53E73964237EF657007E0D80 /* BasePresenter.swift in Sources */,
 				533B51AA23DC3CE0001CF3A5 /* FileDetailsViewController.swift in Sources */,
@@ -631,9 +650,11 @@
 				533B51B923DC4A2E001CF3A5 /* Label.swift in Sources */,
 				533B519A23D9BDC5001CF3A5 /* GetRecentFilesWorker.swift in Sources */,
 				533B519023D9B16C001CF3A5 /* OpenFileModels.swift in Sources */,
+				533B51CC23DC821D001CF3A5 /* DetailModels.swift in Sources */,
 				53E7396D237EFCEB007E0D80 /* SplashRouter.swift in Sources */,
 				533B51B423DC4243001CF3A5 /* LoaderView.swift in Sources */,
 				53E73970237EFCEB007E0D80 /* SplashPresenter.swift in Sources */,
+				533B51C823DC6F34001CF3A5 /* FileDetailsInteractor.swift in Sources */,
 				533B517D23D9AD3B001CF3A5 /* CoreDataManageable.swift in Sources */,
 				533B51BB23DC4A6D001CF3A5 /* UIFont+AppTypo.swift in Sources */,
 				53E73959237EF5F0007E0D80 /* UIViewController+NavigarionBar.swift in Sources */,
@@ -646,10 +667,12 @@
 				533B51B623DC4349001CF3A5 /* ImageOneLineTableViewCell.swift in Sources */,
 				533B519223D9B16C001CF3A5 /* OpenFileBuilder.swift in Sources */,
 				533B518723D9B057001CF3A5 /* UIApplication+Utils.swift in Sources */,
+				533B51CE23DC8473001CF3A5 /* CsvFileMapper.swift in Sources */,
 				533B517923D9AD0D001CF3A5 /* NSManageObject+Utils.swift in Sources */,
 				533B51BF23DC4F5E001CF3A5 /* FileModels.swift in Sources */,
 				533B517723D9ACFD001CF3A5 /* NSManagedObjectContext+Query.swift in Sources */,
 				53E7395A237EF5F0007E0D80 /* Data+Files.swift in Sources */,
+				533B51CA23DC7413001CF3A5 /* ParseCsvFileWorker.swift in Sources */,
 				533B51B123DC41F6001CF3A5 /* OneLineSchimmerTableViewCell.swift in Sources */,
 				53E7396F237EFCEB007E0D80 /* SplashViewController.swift in Sources */,
 				CCED6406237C921900A1D8C0 /* AssignmentDocu.xcdatamodeld in Sources */,
@@ -666,6 +689,7 @@
 				533B51A923DC3CE0001CF3A5 /* FileDetailsModels.swift in Sources */,
 				53E7396E237EFCEB007E0D80 /* SplashBuilder.swift in Sources */,
 				CCED63FE237C921900A1D8C0 /* AppDelegate.swift in Sources */,
+				533B51D023DC8A7E001CF3A5 /* Formatter+Csv.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

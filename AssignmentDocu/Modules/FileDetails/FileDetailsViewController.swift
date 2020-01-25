@@ -33,6 +33,12 @@ final class FileDetailsViewController: BaseViewController {
      - viewWillLayoutSubviews
      - viewDidLayoutSubviews
      */
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        presenter.prepareView()
+    }
 
     // MARK: - Setup
 
