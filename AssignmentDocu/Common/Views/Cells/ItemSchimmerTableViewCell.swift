@@ -52,7 +52,7 @@ public class ItemSchimmerTableViewCell: UITableViewCell {
             shimmerTitleLoader.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -ViewTraits.containerViewInsets.right),
             shimmerTitleLoader.heightAnchor.constraint(equalToConstant: ViewTraits.labelsSize),
             
-            shimmerSubtitleLoader.topAnchor.constraint(equalTo: shimmerTitleLoader.bottomAnchor, constant: ViewTraits.innerLabelsSpacing),
+            shimmerSubtitleLoader.topAnchor.constraint(greaterThanOrEqualTo: shimmerTitleLoader.bottomAnchor, constant: ViewTraits.innerLabelsSpacing),
             shimmerSubtitleLoader.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: ViewTraits.containerViewInsets.left),
             shimmerSubtitleLoader.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -ViewTraits.containerViewInsets.right),
             shimmerSubtitleLoader.heightAnchor.constraint(equalToConstant: ViewTraits.labelsSize),

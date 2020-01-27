@@ -57,7 +57,7 @@ final class FileDetailsViewController: BaseViewController {
         itemsTableView.translatesAutoresizingMaskIntoConstraints = false
         itemsTableView.register(ItemTableViewCell.self, forCellReuseIdentifier: ItemTableViewCell.cellIdentifier)
         itemsTableView.register(ItemSchimmerTableViewCell.self, forCellReuseIdentifier: ItemSchimmerTableViewCell.cellIdentifier)
-        itemsTableView.estimatedRowHeight = 80
+//        itemsTableView.estimatedRowHeight = 65
         itemsTableView.rowHeight = UITableView.automaticDimension
         itemsTableView.separatorStyle = .singleLine
         itemsTableView.dataSource = self
