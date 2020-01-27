@@ -38,11 +38,23 @@ class OpenFilePresenterTests: XCTestCase {
         expect(self.viewControllerSpy.navigateToShowCalled).toEventually(equal(1))
     }
     
+    func test_when_navigate_to_file_called_then_navigate_to_details() {
+        
+        sut.selectFile(at: 0)
+        
+        expect(self.routerSpy.navigateToFileCalled).toEventually(equal(1))
+    }
+    
     private func givenSut() -> OpenFilePresenter<ViewControllerSpy, RouterSpy> {
         viewControllerSpy = ViewControllerSpy()
         routerSpy = RouterSpy()
         
-        let sut = OpenFilePresenter(viewController: viewControllerSpy, router: routerSpy, fileItems: [], fileMapper: OpenFileMapper())
+        let sut = OpenFilePresenter(viewController: viewControllerSpy,
+                                    router: routerSpy,
+                                    fileItems: [FileItemBuilder().with(name: "issues_all")
+                                        .with(path: "documents/issues/issues_all")
+                                        .build()],
+                                    fileMapper: OpenFileMapper())
 
         return sut
     }
