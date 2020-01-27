@@ -8,41 +8,46 @@
 
 import Foundation
 
+enum CsvFileMapperError: Error {
+    case incorrectFormatError
+}
+
 class CsvFileMapper {
     
-    final func map(csvFileItems: [[String]]) -> DetailModels.DetailFile {
+    final func map(csvFileItems: [[String]]) throws -> DetailModels.DetailFile{
         guard !csvFileItems.isEmpty else {
-            return DetailModels.DetailFile(firstNameHeader: "", surNameHeader: "", issuesHeader: "", dateOfBirthHeader: "", items: [])
+            throw CsvFileMapperError.incorrectFormatError
         }
         
         var csvItems: [DetailModels.DetailFile.DetailItem] = []
         
         let firstItem = csvFileItems.first
+        
+        guard firstItem?.count == 4 else {
+            throw CsvFileMapperError.incorrectFormatError
+        }
+        
         var arrayCsvItems = csvFileItems
         arrayCsvItems.remove(at: 0)
         
-        arrayCsvItems.forEach { (file) in
-            guard let mapped = map(csvItem: file) else {
+        try arrayCsvItems.forEach { (file) in
+            guard let mapped = try map(csvItem: file) else {
                 return
             }
             csvItems.append(mapped)
         }
         
-        if firstItem?.count == 4 {
-            return DetailModels.DetailFile(firstNameHeader: firstItem?[0] ?? "",
-            surNameHeader: firstItem?[1] ?? "",
-            issuesHeader: firstItem?[2] ?? "",
-            dateOfBirthHeader: firstItem?[3] ?? "",
-            items: csvItems)
-        }
-        
-        return DetailModels.DetailFile(firstNameHeader: "", surNameHeader: "", issuesHeader: "", dateOfBirthHeader: "", items: csvItems)
+        return DetailModels.DetailFile(firstNameHeader: firstItem?[0] ?? "",
+                                       surNameHeader: firstItem?[1] ?? "",
+                                       issuesHeader: firstItem?[2] ?? "",
+                                       dateOfBirthHeader: firstItem?[3] ?? "",
+                                       items: csvItems)
     }
     
-    final func map(csvItem: [String]) -> DetailModels.DetailFile.DetailItem? {
+    final func map(csvItem: [String]) throws -> DetailModels.DetailFile.DetailItem? {
 
         guard csvItem.count == 4 else {
-            return nil
+            throw CsvFileMapperError.incorrectFormatError
         }
         
         return DetailModels.DetailFile.DetailItem(firstName: csvItem[0] , surName: csvItem[1] , issues: csvItem[2] , dateOfBirth: csvItem[3].toDate())

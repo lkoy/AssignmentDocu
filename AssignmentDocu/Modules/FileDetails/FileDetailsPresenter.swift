@@ -7,13 +7,14 @@
 //
 
 import Foundation
+import UIKit.UIAlertController
 
 protocol FileDetailsViewControllerProtocol: BaseViewControllerProtocol {
 
     func show(_ viewModel: FileDetails.ViewModel)
     func setTitle(_ title: String)
     func showEmptyState()
-    func showErrorAlert()
+    func showErrorAlert(message: String, handler: @escaping ((UIAlertAction) -> Void))
 }
 
 protocol FileDetailsPresenterProtocol: BasePresenterProtocol {
@@ -58,8 +59,20 @@ extension FileDetailsPresenter: FileDetailsInteractorCallbackProtocol {
         }
     }
     
-    func showError() {
+    func showError(error: FileDetailsInteractorError) {
         
-        self.viewController.showErrorAlert()
+        var message = "Something went wrong!"
+        
+        switch error {
+        case .readFileError:
+            message = "Reading file error"
+        case .parsingFileError:
+            message = "File format incorrect."
+        }
+        
+        self.viewController.showErrorAlert(message: message, handler: { action in
+            
+            self.viewController.showEmptyState()
+        })
     }
 }

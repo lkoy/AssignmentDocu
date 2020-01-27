@@ -125,10 +125,10 @@ extension FileDetailsViewController: FileDetailsViewControllerProtocol {
         itemsTableView.reloadData()
     }
     
-    func showErrorAlert() {
+    func showErrorAlert(message: String, handler: @escaping ((UIAlertAction) -> Void)) {
         
-        let alert = UIAlertController(title: "Error", message: "Something went wrong", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: nil))
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: handler))
 
         self.present(alert, animated: true)
     }
@@ -136,6 +136,7 @@ extension FileDetailsViewController: FileDetailsViewControllerProtocol {
 
 // MARK: - TableView Delegate and Data Source
 extension FileDetailsViewController: UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if self.viewModel.isLoading {
             return 1
@@ -145,6 +146,7 @@ extension FileDetailsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         if self.viewModel.isLoading {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: ItemSchimmerTableViewCell.cellIdentifier, for: indexPath) as? ItemSchimmerTableViewCell else {
                 fatalError("Remember to register cellIdentifier")
@@ -156,7 +158,7 @@ extension FileDetailsViewController: UITableViewDataSource {
             }
             let issue = viewModel.issues[indexPath.row]
             cell.title = issue.fullName
-            cell.subtitle = issue.date
+            cell.subtitle = viewModel.dateTitle + ": " + issue.date
             cell.issues = viewModel.issueCountTitle + ": " + issue.issueCount
             return cell
         }

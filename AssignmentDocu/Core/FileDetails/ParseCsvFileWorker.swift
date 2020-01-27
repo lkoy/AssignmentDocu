@@ -37,7 +37,11 @@ final class ParseCsvFileWorker: ParseCsvFileWorkerAlias {
                 csvRows.append(columns)
             }
             
-            completion(.success(self.mapper.map(csvFileItems: csvRows)))
+            do {
+                completion(.success(try self.mapper.map(csvFileItems: csvRows)))
+            } catch {
+                completion(.failure(.parsingFileError))
+            }
         }
     }
     

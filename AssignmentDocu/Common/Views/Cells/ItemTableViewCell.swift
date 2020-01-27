@@ -117,7 +117,7 @@ public class ItemTableViewCell: UITableViewCell {
             subtitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: ViewTraits.innerLabelsSpacing),
             subtitleLabel.bottomAnchor.constraint(equalTo: labelsContainer.bottomAnchor),
             
-            issuesLabel.topAnchor.constraint(equalTo: subtitleLabel.topAnchor),
+            issuesLabel.bottomAnchor.constraint(equalTo: subtitleLabel.bottomAnchor),
             issuesLabel.trailingAnchor.constraint(equalTo: labelsContainer.trailingAnchor)
             ])
     }

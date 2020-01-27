@@ -8,6 +8,11 @@
 
 import Foundation
 
+enum FileDetailsInteractorError: Error {
+    case readFileError
+    case parsingFileError
+}
+
 protocol FileDetailsInteractorProtocol: BaseInteractorProtocol {
 
     func getFileDetailsFromPath(_ path: String, fileType: FileModels.FileItem.Kind)
@@ -16,7 +21,7 @@ protocol FileDetailsInteractorProtocol: BaseInteractorProtocol {
 protocol FileDetailsInteractorCallbackProtocol: BaseInteractorCallbackProtocol {
 
     func parsedFile(_ parsed: DetailModels.DetailFile)
-    func showError()
+    func showError(error: FileDetailsInteractorError)
 }
 
 class FileDetailsInteractor: BaseInteractor {
@@ -43,7 +48,7 @@ class FileDetailsInteractor: BaseInteractor {
                 case .success(let parsedFile):
                     self.presenter.parsedFile(parsedFile)
                 case .failure:
-                    self.presenter.showError()
+                    self.presenter.showError(error: .parsingFileError)
                 }
             }
         }
@@ -61,7 +66,7 @@ extension FileDetailsInteractor: FileDetailsInteractorProtocol {
             case .success(let dataFile):
                 self.parseFile(data: dataFile, fileType: fileType)
             case .failure:
-                self.presenter.showError()
+                self.presenter.showError(error: .readFileError)
             }
         }
     }
