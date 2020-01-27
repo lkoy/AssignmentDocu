@@ -52,6 +52,8 @@
 		53DDD67C23DF4A83009DCB69 /* DetailFileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DDD67B23DF4A83009DCB69 /* DetailFileBuilder.swift */; };
 		53DDD67E23DF4B75009DCB69 /* DetailItemBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DDD67D23DF4B75009DCB69 /* DetailItemBuilder.swift */; };
 		53DDD68023DF5228009DCB69 /* FileDetailsMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DDD67F23DF5228009DCB69 /* FileDetailsMapperTests.swift */; };
+		53DDD68423DF8879009DCB69 /* GetRecentFilesInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DDD68323DF8879009DCB69 /* GetRecentFilesInteractorTests.swift */; };
+		53DDD68623DF8F58009DCB69 /* FileMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DDD68523DF8F58009DCB69 /* FileMapperTests.swift */; };
 		53E73951237EF526007E0D80 /* Cartfile.private in Resources */ = {isa = PBXBuildFile; fileRef = 53E7394F237EF526007E0D80 /* Cartfile.private */; };
 		53E73952237EF526007E0D80 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 53E73950237EF526007E0D80 /* Cartfile */; };
 		53E73958237EF5F0007E0D80 /* UIColor+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E73955237EF5F0007E0D80 /* UIColor+App.swift */; };
@@ -162,6 +164,8 @@
 		53DDD67B23DF4A83009DCB69 /* DetailFileBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFileBuilder.swift; sourceTree = "<group>"; };
 		53DDD67D23DF4B75009DCB69 /* DetailItemBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailItemBuilder.swift; sourceTree = "<group>"; };
 		53DDD67F23DF5228009DCB69 /* FileDetailsMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDetailsMapperTests.swift; sourceTree = "<group>"; };
+		53DDD68323DF8879009DCB69 /* GetRecentFilesInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRecentFilesInteractorTests.swift; sourceTree = "<group>"; };
+		53DDD68523DF8F58009DCB69 /* FileMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileMapperTests.swift; sourceTree = "<group>"; };
 		53E7394F237EF526007E0D80 /* Cartfile.private */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.private; sourceTree = SOURCE_ROOT; };
 		53E73950237EF526007E0D80 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = SOURCE_ROOT; };
 		53E73955237EF5F0007E0D80 /* UIColor+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+App.swift"; sourceTree = "<group>"; };
@@ -348,6 +352,8 @@
 		53DDD64F23DEF30A009DCB69 /* RecentFiles */ = {
 			isa = PBXGroup;
 			children = (
+				53DDD68323DF8879009DCB69 /* GetRecentFilesInteractorTests.swift */,
+				53DDD68523DF8F58009DCB69 /* FileMapperTests.swift */,
 			);
 			path = RecentFiles;
 			sourceTree = "<group>";
@@ -756,6 +762,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53DDD68623DF8F58009DCB69 /* FileMapperTests.swift in Sources */,
 				53DDD67C23DF4A83009DCB69 /* DetailFileBuilder.swift in Sources */,
 				53DDD67E23DF4B75009DCB69 /* DetailItemBuilder.swift in Sources */,
 				53DDD67523DF0834009DCB69 /* OpenFileMapperTests.swift in Sources */,
@@ -763,6 +770,7 @@
 				53DDD67823DF0981009DCB69 /* FileItemBuilder.swift in Sources */,
 				53DDD68023DF5228009DCB69 /* FileDetailsMapperTests.swift in Sources */,
 				53DDD67123DEFFA3009DCB69 /* SplashPresenterTests.swift in Sources */,
+				53DDD68423DF8879009DCB69 /* GetRecentFilesInteractorTests.swift in Sources */,
 				53DDD67A23DF4243009DCB69 /* FileDetailsPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
