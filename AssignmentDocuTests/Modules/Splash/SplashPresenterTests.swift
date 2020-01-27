@@ -1,17 +1,17 @@
 //
-//  AssignmentDocuTests.swift
+//  SplashPresenterTests.swift
 //  AssignmentDocuTests
 //
-//  Created by Gustavo Iglesias on 13/11/2019.
-//  Copyright © 2019 Gustavo Iglesias. All rights reserved.
+//  Created by Iglesias, Gustavo on 27/01/2020.
+//  Copyright © 2020 Gustavo Iglesias. All rights reserved.
 //
 
 import XCTest
-//import Nimble
+import Nimble
 
 @testable import AssignmentDocu
 
-class AssignmentDocuTests: XCTestCase {
+class SplashPresenterTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
