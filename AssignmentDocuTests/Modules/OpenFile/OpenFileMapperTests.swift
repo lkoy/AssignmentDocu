@@ -26,7 +26,7 @@ class OpenFileMapperTests: XCTestCase {
         super.tearDown()
     }
 
-    func test_given_more_no_document_then_show_it() {
+    func test_given_no_document_then_show_it() {
         sut = OpenFileMapper()
         
         let files: [FileModels.FileItem] = []

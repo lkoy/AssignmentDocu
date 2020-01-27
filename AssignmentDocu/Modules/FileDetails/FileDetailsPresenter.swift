@@ -67,7 +67,7 @@ extension FileDetailsPresenter: FileDetailsInteractorCallbackProtocol {
         case .readFileError:
             message = "Reading file error"
         case .parsingFileError:
-            message = "File format incorrect."
+            message = "File format incorrect"
         }
         
         self.viewController.showErrorAlert(message: message, handler: { action in

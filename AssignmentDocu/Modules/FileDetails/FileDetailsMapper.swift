@@ -23,13 +23,13 @@ final class FileDetailsMapper {
             }
             
             
-            let itemView = FileDetails.ViewModel.FileItem(fullName: item.firstName + " " + item.surName, issueCount: item.issues, date: stringDate)
+            let itemView = FileDetails.ViewModel.FileItem(fullName: item.firstName + " " + item.surName,
+                                                          issueCount: detailFile.issuesHeader + ": " + item.issues,
+                                                          date: detailFile.dateOfBirthHeader + ": " + stringDate)
             filesView.append(itemView)
         }
         
         return FileDetails.ViewModel(isLoading: false,
-                                     issueCountTitle: detailFile.issuesHeader,
-                                     dateTitle: detailFile.dateOfBirthHeader,
                                      issues: filesView)
     }
 }

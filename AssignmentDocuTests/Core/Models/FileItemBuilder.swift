@@ -16,21 +16,25 @@ final class FileItemBuilder {
     private var kind: FileModels.FileItem.Kind = .csv
 
     func with(name: String) -> FileItemBuilder {
+        
         self.name = name
         return self
     }
     
     func with(path: String) -> FileItemBuilder {
+        
         self.path = path
         return self
     }
     
     func with(kind: FileModels.FileItem.Kind) -> FileItemBuilder {
+        
         self.kind = kind
         return self
     }
     
     func build() -> FileModels.FileItem {
+        
         return FileModels.FileItem(name: name,
                                    path: path,
                                    kind: kind)

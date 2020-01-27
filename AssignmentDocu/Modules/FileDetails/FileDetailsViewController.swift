@@ -23,7 +23,7 @@ final class FileDetailsViewController: BaseViewController {
     
     private var itemsTableView: UITableView!
     
-    private var viewModel = FileDetails.ViewModel(isLoading: true, issueCountTitle: "", dateTitle: "", issues: [])
+    private var viewModel = FileDetails.ViewModel(isLoading: true, issues: [])
     
     public enum AccessibilityIds {
         
@@ -121,7 +121,7 @@ extension FileDetailsViewController: FileDetailsViewControllerProtocol {
     func showEmptyState() {
         
         self.emptyView.isHidden = false
-        viewModel = FileDetails.ViewModel(isLoading: false, issueCountTitle: "", dateTitle: "", issues: [])
+        viewModel = FileDetails.ViewModel(isLoading: false, issues: [])
         itemsTableView.reloadData()
     }
     
@@ -158,8 +158,8 @@ extension FileDetailsViewController: UITableViewDataSource {
             }
             let issue = viewModel.issues[indexPath.row]
             cell.title = issue.fullName
-            cell.subtitle = viewModel.dateTitle + ": " + issue.date
-            cell.issues = viewModel.issueCountTitle + ": " + issue.issueCount
+            cell.subtitle = issue.date
+            cell.issues = issue.issueCount
             return cell
         }
     }
