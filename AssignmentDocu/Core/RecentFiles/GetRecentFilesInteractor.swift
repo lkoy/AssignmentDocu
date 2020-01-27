@@ -33,7 +33,7 @@ extension GetRecentFilesInteractor: GetRecentFilesInteractorProtocol {
 
     func getRecentFiles() {
         
-        self.worker.execute() { [weak self] (result) in
+        self.worker.execute(input: "Documents") { [weak self] (result) in
             guard let self = self else { return }
             
             switch result {

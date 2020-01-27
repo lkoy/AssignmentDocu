@@ -25,6 +25,7 @@ class GetRecentFilesInteractorTests: XCTestCase {
     override func tearDown() {
         
         presenter = nil
+        mockRecentFilesWorker = nil
         sut = nil
         super.tearDown()
     }
@@ -81,7 +82,7 @@ private class MockRecentFilesWorker: GetRecentFilesWorkerAlias {
         self.result = result
     }
     
-    override func job(completion: @escaping ((Result<[FileModels.FileItem], GetRecentFilesWorkerError>) -> Void)) {
+    override func job(input: String, completion: @escaping ((Result<[FileModels.FileItem], GetRecentFilesWorkerError>) -> Void)) {
         completion(result)
     }
 }

@@ -12,7 +12,7 @@ enum GetRecentFilesWorkerError: Error {
     case getRecentFilesError
 }
 
-typealias GetRecentFilesWorkerAlias = BaseWorker<Void, Result<[FileModels.FileItem], GetRecentFilesWorkerError>>
+typealias GetRecentFilesWorkerAlias = BaseWorker<String, Result<[FileModels.FileItem], GetRecentFilesWorkerError>>
 
 final class GetRecentFilesWorker: GetRecentFilesWorkerAlias {
     
@@ -24,10 +24,10 @@ final class GetRecentFilesWorker: GetRecentFilesWorkerAlias {
         super.init()
     }
     
-    override func job(completion: @escaping ((Result<[FileModels.FileItem], GetRecentFilesWorkerError>) -> Void)) {
+    override func job(input: String, completion: @escaping ((Result<[FileModels.FileItem], GetRecentFilesWorkerError>) -> Void)) {
 
         let mainBundle = Bundle(for: type(of: self))
-        let bundleURL = mainBundle.url(forResource: "Documents", withExtension: "bundle")
+        let bundleURL = mainBundle.url(forResource: input, withExtension: "bundle")
         guard let bURL = bundleURL, let filesBundle = Bundle(url: bURL) else { completion(.success([])); return }
 
         let files = filesBundle.paths(forResourcesOfType: "csv", inDirectory: ".")
