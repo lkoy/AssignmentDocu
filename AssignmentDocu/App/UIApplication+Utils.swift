@@ -17,9 +17,4 @@ extension UIApplication {
             fatalError("UIApplication.shared.delegate isn't instance of AppDelegate")
         }
     }
-    
-    static var provider: Provider = {
-        return appDelegate().provider
-    }()
-    
 }

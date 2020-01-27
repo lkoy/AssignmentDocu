@@ -7,12 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		533B517723D9ACFD001CF3A5 /* NSManagedObjectContext+Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B517623D9ACFD001CF3A5 /* NSManagedObjectContext+Query.swift */; };
-		533B517923D9AD0D001CF3A5 /* NSManageObject+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B517823D9AD0D001CF3A5 /* NSManageObject+Utils.swift */; };
-		533B517B23D9AD26001CF3A5 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B517A23D9AD26001CF3A5 /* CoreDataManager.swift */; };
-		533B517D23D9AD3B001CF3A5 /* CoreDataManageable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B517C23D9AD3B001CF3A5 /* CoreDataManageable.swift */; };
 		533B518223D9AFAB001CF3A5 /* DataConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B518123D9AFAB001CF3A5 /* DataConvertible.swift */; };
-		533B518523D9AFF9001CF3A5 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B518423D9AFF9001CF3A5 /* Provider.swift */; };
 		533B518723D9B057001CF3A5 /* UIApplication+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B518623D9B057001CF3A5 /* UIApplication+Utils.swift */; };
 		533B518E23D9B16C001CF3A5 /* OpenFilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B518923D9B16C001CF3A5 /* OpenFilePresenter.swift */; };
 		533B518F23D9B16C001CF3A5 /* OpenFileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B518A23D9B16C001CF3A5 /* OpenFileRouter.swift */; };
@@ -49,7 +44,7 @@
 		533B51D623DCA868001CF3A5 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B51D523DCA868001CF3A5 /* ItemTableViewCell.swift */; };
 		533B51D823DCAE8A001CF3A5 /* ItemSchimmerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B51D723DCAE8A001CF3A5 /* ItemSchimmerTableViewCell.swift */; };
 		53DDD64723DCD061009DCB69 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DDD64423DCD052009DCB69 /* Nimble.framework */; };
-		53DDD64A23DCD083009DCB69 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 53DDD64923DCD083009DCB69 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		53DDD64C23DEE712009DCB69 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 53DDD64B23DEE712009DCB69 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		53E73951237EF526007E0D80 /* Cartfile.private in Resources */ = {isa = PBXBuildFile; fileRef = 53E7394F237EF526007E0D80 /* Cartfile.private */; };
 		53E73952237EF526007E0D80 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 53E73950237EF526007E0D80 /* Cartfile */; };
 		53E73958237EF5F0007E0D80 /* UIColor+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E73955237EF5F0007E0D80 /* UIColor+App.swift */; };
@@ -68,7 +63,6 @@
 		53E73973237EFF5D007E0D80 /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53E73972237EFF5D007E0D80 /* Lottie.framework */; };
 		53E73974237EFF5D007E0D80 /* Lottie.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 53E73972237EFF5D007E0D80 /* Lottie.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CCED63FE237C921900A1D8C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCED63FD237C921900A1D8C0 /* AppDelegate.swift */; };
-		CCED6406237C921900A1D8C0 /* AssignmentDocu.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CCED6404237C921900A1D8C0 /* AssignmentDocu.xcdatamodeld */; };
 		CCED6408237C921D00A1D8C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCED6407237C921D00A1D8C0 /* Assets.xcassets */; };
 		CCED640B237C921D00A1D8C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCED6409237C921D00A1D8C0 /* LaunchScreen.storyboard */; };
 		CCED6416237C921D00A1D8C0 /* AssignmentDocuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCED6415237C921D00A1D8C0 /* AssignmentDocuTests.swift */; };
@@ -99,7 +93,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				53DDD64A23DCD083009DCB69 /* Nimble.framework in CopyFiles */,
+				53DDD64C23DEE712009DCB69 /* Nimble.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,12 +111,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		533B517623D9ACFD001CF3A5 /* NSManagedObjectContext+Query.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Query.swift"; sourceTree = "<group>"; };
-		533B517823D9AD0D001CF3A5 /* NSManageObject+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManageObject+Utils.swift"; sourceTree = "<group>"; };
-		533B517A23D9AD26001CF3A5 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
-		533B517C23D9AD3B001CF3A5 /* CoreDataManageable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManageable.swift; sourceTree = "<group>"; };
 		533B518123D9AFAB001CF3A5 /* DataConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataConvertible.swift; sourceTree = "<group>"; };
-		533B518423D9AFF9001CF3A5 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		533B518623D9B057001CF3A5 /* UIApplication+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Utils.swift"; sourceTree = "<group>"; };
 		533B518923D9B16C001CF3A5 /* OpenFilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenFilePresenter.swift; sourceTree = "<group>"; };
 		533B518A23D9B16C001CF3A5 /* OpenFileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenFileRouter.swift; sourceTree = "<group>"; };
@@ -159,7 +148,7 @@
 		533B51D523DCA868001CF3A5 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		533B51D723DCAE8A001CF3A5 /* ItemSchimmerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemSchimmerTableViewCell.swift; sourceTree = "<group>"; };
 		53DDD64423DCD052009DCB69 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
-		53DDD64923DCD083009DCB69 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		53DDD64B23DEE712009DCB69 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		53E7394F237EF526007E0D80 /* Cartfile.private */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.private; sourceTree = SOURCE_ROOT; };
 		53E73950237EF526007E0D80 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = SOURCE_ROOT; };
 		53E73955237EF5F0007E0D80 /* UIColor+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+App.swift"; sourceTree = "<group>"; };
@@ -178,7 +167,6 @@
 		53E73972237EFF5D007E0D80 /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lottie.framework; path = Carthage/Build/iOS/Lottie.framework; sourceTree = "<group>"; };
 		CCED63FA237C921900A1D8C0 /* AssignmentDocu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssignmentDocu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCED63FD237C921900A1D8C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CCED6405237C921900A1D8C0 /* AssignmentDocu.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AssignmentDocu.xcdatamodel; sourceTree = "<group>"; };
 		CCED6407237C921D00A1D8C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCED640A237C921D00A1D8C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CCED640C237C921D00A1D8C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -217,33 +205,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		533B517423D9ACAB001CF3A5 /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-				533B517523D9ACBF001CF3A5 /* CoreData */,
-			);
-			path = Managers;
-			sourceTree = "<group>";
-		};
-		533B517523D9ACBF001CF3A5 /* CoreData */ = {
-			isa = PBXGroup;
-			children = (
-				533B517C23D9AD3B001CF3A5 /* CoreDataManageable.swift */,
-				533B517A23D9AD26001CF3A5 /* CoreDataManager.swift */,
-				533B517823D9AD0D001CF3A5 /* NSManageObject+Utils.swift */,
-				533B517623D9ACFD001CF3A5 /* NSManagedObjectContext+Query.swift */,
-			);
-			path = CoreData;
-			sourceTree = "<group>";
-		};
-		533B517E23D9AF69001CF3A5 /* CoreData */ = {
-			isa = PBXGroup;
-			children = (
-				CCED6404237C921900A1D8C0 /* AssignmentDocu.xcdatamodeld */,
-			);
-			path = CoreData;
-			sourceTree = "<group>";
-		};
 		533B517F23D9AF7C001CF3A5 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,14 +220,6 @@
 				533B518123D9AFAB001CF3A5 /* DataConvertible.swift */,
 			);
 			path = Helpers;
-			sourceTree = "<group>";
-		};
-		533B518323D9AFE8001CF3A5 /* Providers */ = {
-			isa = PBXGroup;
-			children = (
-				533B518423D9AFF9001CF3A5 /* Provider.swift */,
-			);
-			path = Providers;
 			sourceTree = "<group>";
 		};
 		533B518823D9B144001CF3A5 /* OpenFile */ = {
@@ -364,7 +317,6 @@
 		53E73949237EF47B007E0D80 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				533B518323D9AFE8001CF3A5 /* Providers */,
 				CCED63FD237C921900A1D8C0 /* AppDelegate.swift */,
 				533B518623D9B057001CF3A5 /* UIApplication+Utils.swift */,
 			);
@@ -375,7 +327,6 @@
 			isa = PBXGroup;
 			children = (
 				533B51AC23DC418C001CF3A5 /* Views */,
-				533B517423D9ACAB001CF3A5 /* Managers */,
 				53E73954237EF5C5007E0D80 /* Extensions */,
 				53E7395B237EF616007E0D80 /* BaseComponents */,
 			);
@@ -387,7 +338,6 @@
 			children = (
 				533B51C423DC5EB4001CF3A5 /* FileDetails */,
 				533B519723D9BD98001CF3A5 /* RecentFiles */,
-				533B517E23D9AF69001CF3A5 /* CoreData */,
 				533B517F23D9AF7C001CF3A5 /* Domain */,
 				533B518023D9AF93001CF3A5 /* Helpers */,
 			);
@@ -484,7 +434,7 @@
 		CCED63F1237C921900A1D8C0 = {
 			isa = PBXGroup;
 			children = (
-				53DDD64923DCD083009DCB69 /* Nimble.framework */,
+				53DDD64B23DEE712009DCB69 /* Nimble.framework */,
 				CCED63FC237C921900A1D8C0 /* AssignmentDocu */,
 				CCED6414237C921D00A1D8C0 /* AssignmentDocuTests */,
 				CCED641F237C921D00A1D8C0 /* AssignmentDocuUITests */,
@@ -687,12 +637,10 @@
 				53E73970237EFCEB007E0D80 /* SplashPresenter.swift in Sources */,
 				533B51C823DC6F34001CF3A5 /* FileDetailsInteractor.swift in Sources */,
 				533B51D823DCAE8A001CF3A5 /* ItemSchimmerTableViewCell.swift in Sources */,
-				533B517D23D9AD3B001CF3A5 /* CoreDataManageable.swift in Sources */,
 				533B51BB23DC4A6D001CF3A5 /* UIFont+AppTypo.swift in Sources */,
 				53E73959237EF5F0007E0D80 /* UIViewController+NavigarionBar.swift in Sources */,
 				53E73958237EF5F0007E0D80 /* UIColor+App.swift in Sources */,
 				533B51D623DCA868001CF3A5 /* ItemTableViewCell.swift in Sources */,
-				533B517B23D9AD26001CF3A5 /* CoreDataManager.swift in Sources */,
 				533B51A723DC3CE0001CF3A5 /* FileDetailsPresenter.swift in Sources */,
 				53E73967237EF657007E0D80 /* BaseInteractor.swift in Sources */,
 				533B519123D9B16C001CF3A5 /* OpenFileViewController.swift in Sources */,
@@ -702,21 +650,17 @@
 				533B518723D9B057001CF3A5 /* UIApplication+Utils.swift in Sources */,
 				533B51D423DCA3AA001CF3A5 /* String+Date.swift in Sources */,
 				533B51CE23DC8473001CF3A5 /* CsvFileMapper.swift in Sources */,
-				533B517923D9AD0D001CF3A5 /* NSManageObject+Utils.swift in Sources */,
 				533B51BF23DC4F5E001CF3A5 /* FileModels.swift in Sources */,
-				533B517723D9ACFD001CF3A5 /* NSManagedObjectContext+Query.swift in Sources */,
 				53E7395A237EF5F0007E0D80 /* Data+Files.swift in Sources */,
 				533B51CA23DC7413001CF3A5 /* ParseCsvFileWorker.swift in Sources */,
 				533B51B123DC41F6001CF3A5 /* OneLineSchimmerTableViewCell.swift in Sources */,
 				53E7396F237EFCEB007E0D80 /* SplashViewController.swift in Sources */,
-				CCED6406237C921900A1D8C0 /* AssignmentDocu.xcdatamodeld in Sources */,
 				533B518E23D9B16C001CF3A5 /* OpenFilePresenter.swift in Sources */,
 				533B518223D9AFAB001CF3A5 /* DataConvertible.swift in Sources */,
 				533B519623D9BC32001CF3A5 /* UINavigationBar+Style.swift in Sources */,
 				533B51A823DC3CE0001CF3A5 /* FileDetailsRouter.swift in Sources */,
 				533B51C123DC50E1001CF3A5 /* FileMapper.swift in Sources */,
 				533B518F23D9B16C001CF3A5 /* OpenFileRouter.swift in Sources */,
-				533B518523D9AFF9001CF3A5 /* Provider.swift in Sources */,
 				533B51C323DC5586001CF3A5 /* OpenFileMapper.swift in Sources */,
 				53E73965237EF657007E0D80 /* BaseRouter.swift in Sources */,
 				53E73962237EF657007E0D80 /* BaseViewController.swift in Sources */,
@@ -1062,19 +1006,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		CCED6404237C921900A1D8C0 /* AssignmentDocu.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				CCED6405237C921900A1D8C0 /* AssignmentDocu.xcdatamodel */,
-			);
-			currentVersion = CCED6405237C921900A1D8C0 /* AssignmentDocu.xcdatamodel */;
-			path = AssignmentDocu.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = CCED63F2237C921900A1D8C0 /* Project object */;
 }
