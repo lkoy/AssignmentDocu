@@ -16,7 +16,6 @@ protocol GetRecentFilesInteractorProtocol: BaseInteractorProtocol {
 protocol GetRecentFilesInteractorCallbackProtocol: BaseInteractorCallbackProtocol {
 
     func filesFound(files: [FileModels.FileItem])
-    func showError()
 }
 
 class GetRecentFilesInteractor: BaseInteractor {
@@ -41,9 +40,8 @@ extension GetRecentFilesInteractor: GetRecentFilesInteractorProtocol {
             case.success(let recentFilesList):
                 self.presenter.filesFound(files: recentFilesList)
             case .failure:
-                self.presenter.showError()
+                self.presenter.filesFound(files: [])
             }
         }
     }
-    
 }

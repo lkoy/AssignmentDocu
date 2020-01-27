@@ -314,6 +314,36 @@
 			path = FileDetails;
 			sourceTree = "<group>";
 		};
+		53DDD64D23DEF2DA009DCB69 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		53DDD64E23DEF2F8009DCB69 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				53DDD65023DEF316009DCB69 /* FileDetails */,
+				53DDD64F23DEF30A009DCB69 /* RecentFiles */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		53DDD64F23DEF30A009DCB69 /* RecentFiles */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RecentFiles;
+			sourceTree = "<group>";
+		};
+		53DDD65023DEF316009DCB69 /* FileDetails */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FileDetails;
+			sourceTree = "<group>";
+		};
 		53E73949237EF47B007E0D80 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -469,6 +499,8 @@
 		CCED6414237C921D00A1D8C0 /* AssignmentDocuTests */ = {
 			isa = PBXGroup;
 			children = (
+				53DDD64E23DEF2F8009DCB69 /* Core */,
+				53DDD64D23DEF2DA009DCB69 /* Modules */,
 				CCED6415237C921D00A1D8C0 /* AssignmentDocuTests.swift */,
 				CCED6417237C921D00A1D8C0 /* Info.plist */,
 			);
