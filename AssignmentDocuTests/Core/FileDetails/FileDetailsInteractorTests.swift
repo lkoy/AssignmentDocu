@@ -16,7 +16,6 @@ class FileDetailsInteractorTests: XCTestCase {
     private var sut: FileDetailsInteractor!
     private var presenter: SpyPresenter!
     private var mockReadFileWorker: MockReadFileWorker!
-    private var mockParseCsvFileWorker: MockParseCsvFileWorker!
     
     override func setUp() {
         
@@ -27,14 +26,13 @@ class FileDetailsInteractorTests: XCTestCase {
         
         presenter = nil
         mockReadFileWorker = nil
-        mockParseCsvFileWorker = nil
         sut = nil
         super.tearDown()
     }
 
     func test_get_recent_files_return_read_file_error_then_call_show_error () {
             
-        givenSutWithFileDetailsResult(.failure(.readFileError), parseCsvFileResult: .failure(.parsingFileError))
+        givenSutWithFileDetailsResult(.failure(.readFileError))
             
         sut.getFileDetailsFromPath("/docs/issues", fileType: .csv)
         
@@ -43,9 +41,31 @@ class FileDetailsInteractorTests: XCTestCase {
         expect(self.presenter.error).toEventually(equal(.readFileError))
     }
     
-    func test_get_recent_files_return_parse_file_error_then_call_show_error () {
+    func test_get_recent_files_incorrect_headers_return_parse_file_error_then_call_show_error () {
             
-        givenSutWithFileDetailsResult(.success("\"First name\",\"Sur name\",\"Issue count\"\r\n\"Theo\",\"Jansen\",5,\"1978-01-02T00:00:00\"\r\n\"Fiona\",\"de Vries\",7,\"1950-11-12T00:00:00\"\r\n\"Petra\",\"Boersma\",1,\"2001-04-20T00:00:00\"\r\n"), parseCsvFileResult: .failure(.parsingFileError))
+        givenSutWithFileDetailsResult(.success("\"First name\",\"Sur name\",\"Issue count\"\r\n\"Theo\",\"Jansen\",5,\"1978-01-02T00:00:00\"\r\n\"Fiona\",\"de Vries\",7,\"1950-11-12T00:00:00\"\r\n\"Petra\",\"Boersma\",1,\"2001-04-20T00:00:00\"\r\n"))
+            
+        sut.getFileDetailsFromPath("/docs/issues", fileType: .csv)
+        
+        expect(self.presenter.showErrorCalled).toEventually(equal(1))
+        expect(self.presenter.parsedFileCalled).toEventually(equal(0))
+        expect(self.presenter.error).toEventually(equal(.parsingFileError))
+    }
+    
+    func test_get_recent_files_incorrect_data_return_parse_file_error_then_call_show_error () {
+            
+        givenSutWithFileDetailsResult(.success("\"First name\",\"Sur name\",\"Issue count\",\"Date of birth\"\r\n\"Theo\",\"Jansen\",5,\"1978-01-02T00:00:00\"\r\n\"Fiona\",\"de Vries\",7,\"1950-11-12T00:00:00\"\r\n\"Petra\",\"Boersma\",1\r\n"))
+            
+        sut.getFileDetailsFromPath("/docs/issues", fileType: .csv)
+        
+        expect(self.presenter.showErrorCalled).toEventually(equal(1))
+        expect(self.presenter.parsedFileCalled).toEventually(equal(0))
+        expect(self.presenter.error).toEventually(equal(.parsingFileError))
+    }
+    
+    func test_get_recent_files_empty_data_return_parse_file_error_then_call_show_error () {
+            
+        givenSutWithFileDetailsResult(.success(""))
             
         sut.getFileDetailsFromPath("/docs/issues", fileType: .csv)
         
@@ -58,15 +78,15 @@ class FileDetailsInteractorTests: XCTestCase {
         
         let expectedModel = DetailFileBuilder()
         .with(issuesHeader: "Issue count")
-        .with(surNameHeader: "Issue count")
-        .with(firstNameHeader: "Issue count")
-        .with(dateOfBirthHeader: "Issue count")
+        .with(surNameHeader: "Sur name")
+        .with(firstNameHeader: "First name")
+        .with(dateOfBirthHeader: "Date of birth")
         .with(items: [DetailItemBuilder().with(dateOfBirth: "1978-01-02T00:00:00".toDate()!).with(firstName: "Theo").with(surName: "Jansen").with(issues: "5").build(),
                       DetailItemBuilder().with(dateOfBirth: "1950-11-12T00:00:00".toDate()!).with(firstName: "Fiona").with(surName: "de Vries").with(issues: "7").build(),
                       DetailItemBuilder().with(dateOfBirth: "2001-04-20T00:00:00".toDate()!).with(firstName: "Petra").with(surName: "Boersma").with(issues: "1").build()])
         .build()
         
-        givenSutWithFileDetailsResult(.success("\"First name\",\"Sur name\",\"Issue count\",\"Date of birth\"\r\n\"Theo\",\"Jansen\",5,\"1978-01-02T00:00:00\"\r\n\"Fiona\",\"de Vries\",7,\"1950-11-12T00:00:00\"\r\n\"Petra\",\"Boersma\",1,\"2001-04-20T00:00:00\"\r\n"), parseCsvFileResult: .success(expectedModel))
+        givenSutWithFileDetailsResult(.success("\"First name\",\"Sur name\",\"Issue count\",\"Date of birth\"\r\n\"Theo\",\"Jansen\",5,\"1978-01-02T00:00:00\"\r\n\"Fiona\",\"de Vries\",7,\"1950-11-12T00:00:00\"\r\n\"Petra\",\"Boersma\",1,\"2001-04-20T00:00:00\"\r\n"))
             
         sut.getFileDetailsFromPath("/docs/issues", fileType: .csv)
         
@@ -75,13 +95,12 @@ class FileDetailsInteractorTests: XCTestCase {
         expect(self.presenter.filesFound).toEventually(equal(expectedModel))
     }
     
-    private func givenSutWithFileDetailsResult(_ readFileResult: Result<String, ReadFileWorkerError>, parseCsvFileResult: Result<DetailModels.DetailFile, ParseCsvFileWorkerError>) {
+    private func givenSutWithFileDetailsResult(_ readFileResult: Result<String, ReadFileWorkerError>) {
         
         presenter = SpyPresenter()
         mockReadFileWorker = MockReadFileWorker(result: readFileResult)
-        mockParseCsvFileWorker = MockParseCsvFileWorker(result: parseCsvFileResult)
         
-        sut = FileDetailsInteractor(withReadFileWorker: mockReadFileWorker, parseCsvFileWorker: mockParseCsvFileWorker)
+        sut = FileDetailsInteractor(withReadFileWorker: mockReadFileWorker, parseCsvFileWorker: ParseCsvFileWorker())
 
         sut.presenter = presenter
     }
@@ -117,19 +136,6 @@ private class MockReadFileWorker: ReadFileWorkerAlias {
     }
     
     override func job(input: String, completion: @escaping ((Result<String, ReadFileWorkerError>) -> Void)) {
-        completion(result)
-    }
-}
-
-private class MockParseCsvFileWorker: ParseCsvFileWorkerAlias {
-    
-    var result: Result<DetailModels.DetailFile, ParseCsvFileWorkerError>
-    
-    init(result: Result<DetailModels.DetailFile, ParseCsvFileWorkerError>) {
-        self.result = result
-    }
-    
-    override func job(input: String, completion: @escaping (Result<DetailModels.DetailFile, ParseCsvFileWorkerError>) -> Void) {
         completion(result)
     }
 }

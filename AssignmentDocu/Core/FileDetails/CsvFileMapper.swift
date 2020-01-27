@@ -31,10 +31,8 @@ class CsvFileMapper {
         arrayCsvItems.remove(at: 0)
         
         try arrayCsvItems.forEach { (file) in
-            guard let mapped = try map(csvItem: file) else {
-                return
-            }
-            csvItems.append(mapped)
+            
+            csvItems.append(try map(csvItem: file))
         }
         
         return DetailModels.DetailFile(firstNameHeader: firstItem?[0] ?? "",
@@ -44,7 +42,7 @@ class CsvFileMapper {
                                        items: csvItems)
     }
     
-    final func map(csvItem: [String]) throws -> DetailModels.DetailFile.DetailItem? {
+    final func map(csvItem: [String]) throws -> DetailModels.DetailFile.DetailItem {
 
         guard csvItem.count == 4 else {
             throw CsvFileMapperError.incorrectFormatError
