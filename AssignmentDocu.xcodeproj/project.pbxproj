@@ -45,6 +45,9 @@
 		533B51D823DCAE8A001CF3A5 /* ItemSchimmerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B51D723DCAE8A001CF3A5 /* ItemSchimmerTableViewCell.swift */; };
 		53DDD66523DEFEFA009DCB69 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 53DDD66423DEFEFA009DCB69 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		53DDD67123DEFFA3009DCB69 /* SplashPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DDD67023DEFFA3009DCB69 /* SplashPresenterTests.swift */; };
+		53DDD67323DF03FD009DCB69 /* OpenFilePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DDD67223DF03FD009DCB69 /* OpenFilePresenterTests.swift */; };
+		53DDD67523DF0834009DCB69 /* OpenFileMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DDD67423DF0834009DCB69 /* OpenFileMapperTests.swift */; };
+		53DDD67823DF0981009DCB69 /* FileItemBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DDD67723DF0981009DCB69 /* FileItemBuilder.swift */; };
 		53E73951237EF526007E0D80 /* Cartfile.private in Resources */ = {isa = PBXBuildFile; fileRef = 53E7394F237EF526007E0D80 /* Cartfile.private */; };
 		53E73952237EF526007E0D80 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 53E73950237EF526007E0D80 /* Cartfile */; };
 		53E73958237EF5F0007E0D80 /* UIColor+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E73955237EF5F0007E0D80 /* UIColor+App.swift */; };
@@ -148,6 +151,9 @@
 		533B51D723DCAE8A001CF3A5 /* ItemSchimmerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemSchimmerTableViewCell.swift; sourceTree = "<group>"; };
 		53DDD66423DEFEFA009DCB69 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		53DDD67023DEFFA3009DCB69 /* SplashPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenterTests.swift; sourceTree = "<group>"; };
+		53DDD67223DF03FD009DCB69 /* OpenFilePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenFilePresenterTests.swift; sourceTree = "<group>"; };
+		53DDD67423DF0834009DCB69 /* OpenFileMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenFileMapperTests.swift; sourceTree = "<group>"; };
+		53DDD67723DF0981009DCB69 /* FileItemBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileItemBuilder.swift; sourceTree = "<group>"; };
 		53E7394F237EF526007E0D80 /* Cartfile.private */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.private; sourceTree = SOURCE_ROOT; };
 		53E73950237EF526007E0D80 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = SOURCE_ROOT; };
 		53E73955237EF5F0007E0D80 /* UIColor+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+App.swift"; sourceTree = "<group>"; };
@@ -324,6 +330,7 @@
 		53DDD64E23DEF2F8009DCB69 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				53DDD67623DF0958009DCB69 /* Models */,
 				53DDD65023DEF316009DCB69 /* FileDetails */,
 				53DDD64F23DEF30A009DCB69 /* RecentFiles */,
 			);
@@ -355,6 +362,8 @@
 		53DDD66E23DEFF7B009DCB69 /* OpenFile */ = {
 			isa = PBXGroup;
 			children = (
+				53DDD67223DF03FD009DCB69 /* OpenFilePresenterTests.swift */,
+				53DDD67423DF0834009DCB69 /* OpenFileMapperTests.swift */,
 			);
 			path = OpenFile;
 			sourceTree = "<group>";
@@ -364,6 +373,14 @@
 			children = (
 			);
 			path = FileDetails;
+			sourceTree = "<group>";
+		};
+		53DDD67623DF0958009DCB69 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				53DDD67723DF0981009DCB69 /* FileItemBuilder.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		53E73949237EF47B007E0D80 /* App */ = {
@@ -727,6 +744,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53DDD67523DF0834009DCB69 /* OpenFileMapperTests.swift in Sources */,
+				53DDD67323DF03FD009DCB69 /* OpenFilePresenterTests.swift in Sources */,
+				53DDD67823DF0981009DCB69 /* FileItemBuilder.swift in Sources */,
 				53DDD67123DEFFA3009DCB69 /* SplashPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
